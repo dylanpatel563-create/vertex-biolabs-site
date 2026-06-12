@@ -3,14 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research — Vertex Biolabs</title>
-  <meta name="description" content="How Vertex Biolabs chooses ingredients, tests every batch, and backs its formulas with credible research and third-party verification." />
+  <title>Research &amp; Testing — Vertex Biolabs</title>
+  <meta name="description" content="How Vertex Biolabs sources, tests, and verifies research peptides — HPLC & mass-spec analysis, third-party labs, and a certificate of analysis for every lot." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+
+  <!-- ============ ANNOUNCEMENT MARQUEE ============ -->
+  <div class="announce">
+    <div class="marquee" aria-hidden="true">
+      <span><b>99%+ purity</b> — HPLC &amp; mass-spec verified</span>
+      <span><b>CoA</b> included on every lot</span>
+      <span><b>Ships within 24h</b> · free U.S. shipping over $60</span>
+      <span><b>3rd-party tested</b> in U.S. labs</span>
+      <span><b>99%+ purity</b> — HPLC &amp; mass-spec verified</span>
+      <span><b>CoA</b> included on every lot</span>
+      <span><b>Ships within 24h</b> · free U.S. shipping over $60</span>
+      <span><b>3rd-party tested</b> in U.S. labs</span>
+    </div>
+  </div>
 
   <!-- ============ HEADER ============ -->
   <header class="site-header">
@@ -38,21 +52,38 @@
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow">Research &amp; Quality</span>
-      <h1>The science behind the bottle</h1>
-      <p>We build every formula on credible evidence, then prove what’s inside with independent testing. Here’s how we do it.</p>
+      <h1>The science behind <span class="grad">every vial</span></h1>
+      <p>We verify what’s inside before it ships. Here’s how Vertex sources, tests, and documents every research compound.</p>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="stats" style="padding:64px 0;">
+    <div class="container">
+      <div class="stat reveal"><div class="stat-num" data-count="99.9" data-decimals="1" data-suffix="%">0</div><div class="stat-label">Average tested purity</div></div>
+      <div class="stat reveal d1"><div class="stat-num" data-count="100" data-suffix="%">0</div><div class="stat-label">Batches 3rd-party tested</div></div>
+      <div class="stat reveal d2"><div class="stat-num" data-count="3" data-suffix="×">0</div><div class="stat-label">Independent test methods</div></div>
+      <div class="stat reveal d3"><div class="stat-num" data-count="100" data-suffix="%">0</div><div class="stat-label">Lots with a CoA</div></div>
     </div>
   </section>
 
   <!-- ============ APPROACH ============ -->
   <section>
     <div class="container split">
-      <div class="art"></div>
-      <div>
-        <span class="eyebrow">Our approach</span>
-        <h2 style="font-size:clamp(1.8rem,3vw,2.4rem); margin:0.6rem 0 1rem;">Evidence first, marketing second</h2>
-        <p style="color:var(--muted); margin-bottom:1rem;">We start every product with the research. An ingredient only earns a place in a Vertex blend if there’s credible, peer-reviewed work behind it — and we use it at the doses studies actually rely on, not pixie-dusted trace amounts that look good on a label.</p>
-        <p style="color:var(--muted); margin-bottom:1rem;">We read the literature critically: study size, design, funding, and whether results hold up across independent trials. When the evidence is early or mixed, we say so rather than overpromise.</p>
-        <p style="color:var(--muted);">The result is a short, honest list of ingredients you can look up yourself — and ask us about anytime.</p>
+      <div class="art reveal">
+        <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#9fb4d6"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#c7d3e8"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="58" width="36" height="58" fill="#2563eb"/><text x="60" y="82" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="8" fill="#ffffff">VERTEX</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="5" letter-spacing="1.6" fill="#cdd8ea">PEPTIDES</text></svg>
+      </div>
+      <div class="reveal d1">
+        <span class="eyebrow">Our standard</span>
+        <h2 style="font-size:clamp(1.9rem,3vw,2.4rem); margin:0.6rem 0 0.6rem;">The CoA is the only claim that counts</h2>
+        <p style="color:var(--muted); margin-bottom:0.4rem;">Anyone can print “99% pure” on a label. We back it with independent analysis on every batch, tied to the lot number on your vial — so the documentation, not the marketing, is what you rely on.</p>
+        <ul class="check-list">
+          <li><strong>Identity &amp; potency</strong> confirmed by HPLC</li>
+          <li><strong>Mass spectrometry</strong> to verify molecular weight</li>
+          <li>Screened for <strong>endotoxins, microbes &amp; contaminants</strong></li>
+          <li>Every result recorded on a <strong>lot-specific CoA</strong></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Request a CoA</a>
       </div>
     </div>
   </section>
@@ -60,77 +91,37 @@
   <!-- ============ TESTING PROCESS ============ -->
   <section style="background:var(--paper);">
     <div class="container">
-      <div class="section-head"><span class="eyebrow">How we test</span><h2>From raw material to your shelf</h2><p>Every batch passes through the same four checkpoints before it ships.</p></div>
+      <div class="section-head reveal"><span class="eyebrow">How we test</span><h2>From raw peptide to your bench</h2><p>Every lot passes the same four checkpoints before it ships.</p></div>
       <div class="value-cards" style="grid-template-columns:repeat(4,1fr);">
-        <div class="value-card">
-          <div class="step-num">1</div>
-          <h3>Source &amp; vet</h3>
-          <p>We qualify each supplier and request identity and origin documentation for every raw ingredient.</p>
-        </div>
-        <div class="value-card">
-          <div class="step-num">2</div>
-          <h3>Identity &amp; potency</h3>
-          <p>Incoming materials are tested to confirm they are what they claim — and as potent as they should be.</p>
-        </div>
-        <div class="value-card">
-          <div class="step-num">3</div>
-          <h3>Purity screen</h3>
-          <p>Finished batches are screened by an independent lab for heavy metals, microbes, and contaminants.</p>
-        </div>
-        <div class="value-card">
-          <div class="step-num">4</div>
-          <h3>Certificate of analysis</h3>
-          <p>Each batch gets a COA tied to its lot number — available to you on request, anytime.</p>
-        </div>
+        <div class="value-card reveal"><div class="step-num">1</div><h3>Source &amp; vet</h3><p>We qualify each synthesis partner and require origin documentation for every raw peptide.</p></div>
+        <div class="value-card reveal d1"><div class="step-num">2</div><h3>Identity &amp; potency</h3><p>HPLC and mass-spec confirm each compound is what it claims — and as potent as it should be.</p></div>
+        <div class="value-card reveal d2"><div class="step-num">3</div><h3>Purity screen</h3><p>Independent labs screen finished lots for endotoxins, microbes, and contaminants.</p></div>
+        <div class="value-card reveal d3"><div class="step-num">4</div><h3>Certificate of analysis</h3><p>Each lot gets a CoA tied to its lot number — included with every order, free.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ INGREDIENT SCIENCE ============ -->
+  <!-- ============ COMPOUND SPOTLIGHT ============ -->
   <section>
     <div class="container">
-      <div class="section-head"><span class="eyebrow">Ingredient spotlight</span><h2>What the research says</h2><p>A plain-English look at a few of the ingredients in our blends. These are general summaries, not medical claims.*</p></div>
+      <div class="section-head reveal"><span class="eyebrow">Compound spotlight</span><h2>What the research explores</h2><p>Plain-English context on a few of our most-requested compounds. General research summaries only — not medical claims.*</p></div>
       <div class="value-cards">
-        <div class="value-card">
-          <div class="ico">🌿</div>
-          <h3>Ashwagandha (KSM-66®)</h3>
-          <p>One of the most-studied adaptogens, examined in randomized trials for its role in supporting the body’s response to everyday stress.*</p>
-        </div>
-        <div class="value-card">
-          <div class="ico">⚡</div>
-          <h3>Magnesium glycinate</h3>
-          <p>A highly absorbable form of an essential mineral many adults fall short on, involved in hundreds of processes including muscle and nerve function.*</p>
-        </div>
-        <div class="value-card">
-          <div class="ico">🧠</div>
-          <h3>Lion’s mane</h3>
-          <p>A functional mushroom studied for compounds of interest to cognition and nerve health, with promising but still-developing research.*</p>
-        </div>
-        <div class="value-card">
-          <div class="ico">🐟</div>
-          <h3>Omega-3 (EPA/DHA)</h3>
-          <p>Among the best-researched supplements in the world, with extensive literature on heart, brain, and joint health.*</p>
-        </div>
-        <div class="value-card">
-          <div class="ico">☀️</div>
-          <h3>Vitamin D3 + K2</h3>
-          <p>A pairing studied for supporting healthy calcium use — D3 for absorption, K2 for directing it where it belongs.*</p>
-        </div>
-        <div class="value-card">
-          <div class="ico">🦠</div>
-          <h3>Multi-strain probiotics</h3>
-          <p>Specific, characterized strains studied for digestive and gut-balance support, dosed by colony-forming units (CFU).*</p>
-        </div>
+        <div class="value-card reveal"><div class="ico">🧬</div><h3>BPC-157</h3><p>A pentadecapeptide widely studied in tissue-repair and recovery research models.*</p></div>
+        <div class="value-card reveal d1"><div class="ico">🩹</div><h3>TB-500</h3><p>A synthetic thymosin β4 fragment investigated in cellular-repair and flexibility research.*</p></div>
+        <div class="value-card reveal d2"><div class="ico">✨</div><h3>GHK-Cu</h3><p>A copper-binding peptide explored in skin, collagen, and anti-aging research.*</p></div>
+        <div class="value-card reveal"><div class="ico">⚡</div><h3>NAD+</h3><p>A coenzyme central to cellular-energy metabolism and longevity research.*</p></div>
+        <div class="value-card reveal d1"><div class="ico">📈</div><h3>Ipamorelin</h3><p>A selective secretagogue studied in growth-signaling research.*</p></div>
+        <div class="value-card reveal d2"><div class="ico">🌙</div><h3>DSIP</h3><p>Delta sleep-inducing peptide studied in sleep-cycle research models.*</p></div>
       </div>
     </div>
   </section>
 
   <!-- ============ TRANSPARENCY BAND ============ -->
-  <section>
+  <section style="padding-top:0;">
     <div class="container">
-      <div class="cta-band">
+      <div class="cta-band reveal">
         <h2>Want to see a certificate of analysis?</h2>
-        <p>Tell us the product and the lot number printed on your bottle, and we’ll send the third-party test results for that exact batch.</p>
+        <p>Tell us the compound and the lot number printed on your vial, and we’ll send the third-party test results for that exact batch.</p>
         <a href="contact.html" class="btn btn-light">Request lab results</a>
       </div>
     </div>
@@ -139,11 +130,11 @@
   <!-- ============ RESEARCH FAQ ============ -->
   <section style="padding-top:0;">
     <div class="container" style="max-width:760px;">
-      <div class="section-head"><span class="eyebrow">Good to know</span><h2>Research, answered</h2></div>
-      <div class="faq-item"><h3>Do you run your own clinical trials?</h3><p>Not yet. We formulate based on published, peer-reviewed research on individual ingredients, and we verify our finished products with independent third-party labs. We’re transparent about which claims are well-established and which are still emerging.</p></div>
-      <div class="faq-item"><h3>What does “third-party tested” actually mean here?</h3><p>It means an independent lab — not us — tests each batch for identity, potency, and contaminants like heavy metals and microbes. The results are recorded on a certificate of analysis tied to that batch’s lot number.</p></div>
-      <div class="faq-item"><h3>Are your products FDA approved?</h3><p>Dietary supplements are not approved by the FDA. Our products are made in line with FDA dietary-supplement regulations, and our statements have not been evaluated by the FDA. They are not intended to diagnose, treat, cure, or prevent any disease.</p></div>
-      <div class="faq-item"><h3>Where can I read the studies myself?</h3><p>We’re happy to point you to the research behind any ingredient — just ask. We encourage looking ingredients up on resources like PubMed and bringing questions to your healthcare provider.</p></div>
+      <div class="section-head reveal"><span class="eyebrow">Good to know</span><h2>Testing, answered</h2></div>
+      <div class="faq-item reveal"><h3>What does “third-party tested” mean here?</h3><p>An independent lab — not us — tests each lot by HPLC and mass spectrometry for identity and purity, and screens for contaminants. Results are recorded on a certificate of analysis tied to that lot number.</p></div>
+      <div class="faq-item reveal"><h3>How pure are your compounds?</h3><p>Our compounds test to 99%+ purity. The exact figure for your specific lot is printed on its certificate of analysis, which we’ll provide on request.</p></div>
+      <div class="faq-item reveal"><h3>Are these products approved for human use?</h3><p>No. All Vertex Biolabs compounds are sold strictly for in-vitro laboratory and research use. They are not for human or veterinary use and are not approved by the FDA for any therapeutic purpose.</p></div>
+      <div class="faq-item reveal"><h3>Can I get a CoA before I order?</h3><p>Yes — contact us with the compound you’re interested in and we’ll share a representative certificate of analysis for the current lot.</p></div>
     </div>
   </section>
 
@@ -151,13 +142,13 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><a class="brand" href="index.html" style="color:var(--white);"><svg class="logo-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#2563eb"/><path d="M20 9 L27 28 L20 23 L13 28 Z" fill="#0f1216"/></svg> Vertex Biolabs</a><p>Small-batch, naturally sourced supplements made by hand with clean ingredients and full transparency.</p></div>
-        <div><h4>Shop</h4><a href="products.html">All products</a><a href="products.html">Bestsellers</a><a href="products.html">New arrivals</a></div>
-        <div><h4>Company</h4><a href="research.html">Research</a><a href="contact.html">Contact</a><a href="research.html">Lab results</a></div>
-        <div><h4>Help</h4><a href="contact.html">Shipping &amp; returns</a><a href="contact.html">FAQ</a><a href="contact.html">Get in touch</a></div>
+        <div class="footer-brand"><a class="brand" href="index.html" style="color:#fff;"><svg class="logo-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#2563eb"/><path d="M20 9 L27 28 L20 23 L13 28 Z" fill="#0b0e13"/></svg> Vertex Biolabs</a><p>High-purity research peptides — HPLC &amp; mass-spec tested, batch-traceable, with a certificate of analysis on every order.</p></div>
+        <div><h4>Shop</h4><a href="products.html">All compounds</a><a href="products.html">Bestsellers</a><a href="products.html">New arrivals</a></div>
+        <div><h4>Company</h4><a href="research.html">Research &amp; testing</a><a href="contact.html">Contact</a><a href="research.html">Lab results / CoA</a></div>
+        <div><h4>Help</h4><a href="contact.html">Shipping &amp; returns</a><a href="contact.html">FAQ</a><a href="contact.html">Bulk orders</a></div>
       </div>
-      <div class="disclaimer"><strong>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</strong> Vertex Biolabs products are dietary supplements. Consult your healthcare provider before use if you are pregnant, nursing, taking medication, or have a medical condition. Keep out of reach of children.</div>
-      <div class="footer-bottom"><span>© <span data-year>2026</span> Vertex Biolabs. All rights reserved.</span><span>Made in small batches 🌿</span></div>
+      <div class="disclaimer"><strong>For laboratory and in-vitro research use only.</strong> Vertex Biolabs research compounds are not for human or veterinary use, and not for use in diagnostic, therapeutic, or food applications. By purchasing, you confirm you are a qualified researcher and will handle these materials in accordance with all applicable laws and regulations. All compounds are HPLC and mass-spec tested to 99%+ purity, with a certificate of analysis available for every lot.</div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Vertex Biolabs. All rights reserved.</span><span>Batch-tested · CoA on every lot 🧪</span></div>
     </div>
   </footer>
 

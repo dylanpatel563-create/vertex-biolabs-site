@@ -20,6 +20,60 @@
     el.textContent = new Date().getFullYear();
   });
 
+  /* ---------- Header shadow on scroll ---------- */
+  var header = document.querySelector('.site-header');
+  if (header) {
+    var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  var reveals = document.querySelectorAll('.reveal');
+  if (reveals.length && 'IntersectionObserver' in window) {
+    var ro = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(function (el) { ro.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---------- Animated stat counters ---------- */
+  var counters = document.querySelectorAll('[data-count]');
+  if (counters.length) {
+    var fmt = function (n, dec) {
+      var s = dec ? n.toFixed(dec) : Math.round(n).toString();
+      var parts = s.split('.');
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return parts.join('.');
+    };
+    var run = function (el) {
+      var target = parseFloat(el.getAttribute('data-count'));
+      var dec = parseInt(el.getAttribute('data-decimals') || '0', 10);
+      var suffix = el.getAttribute('data-suffix') || '';
+      var prefix = el.getAttribute('data-prefix') || '';
+      var dur = 1500, start = performance.now();
+      var tick = function (now) {
+        var p = Math.min(1, (now - start) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = prefix + fmt(target * eased, dec) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    if ('IntersectionObserver' in window) {
+      var co = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { run(e.target); co.unobserve(e.target); } });
+      }, { threshold: 0.4 });
+      counters.forEach(function (el) { co.observe(el); });
+    } else {
+      counters.forEach(run);
+    }
+  }
+
   /* ---------- Newsletter (front-end capture) ----------
      To actually collect addresses, POST to your email provider
      (Mailchimp/ConvertKit/Buttondown) — see the Launch Guide. */
@@ -49,6 +103,50 @@
       var status = cf.querySelector('#contact-status');
       if (status) status.textContent = 'Opening your email app to send this message…';
       window.location.href = 'mailto:hello@vertexbiolabs.com?subject=' + subject + '&body=' + body;
+    });
+  }
+
+  /* ---------- Research-use-only gate ----------
+     Mirrors the AminoClub store entry: confirm age + researcher status
+     before the catalog is usable. Remembered in localStorage. */
+  var gate = document.querySelector('#ruo-gate');
+  if (gate) {
+    var GKEY = 'vbx_ruo_ok';
+    if (localStorage.getItem(GKEY) === '1') {
+      gate.setAttribute('hidden', '');
+    } else {
+      document.body.style.overflow = 'hidden';
+      var chk = gate.querySelector('#ruo-confirm');
+      var enter = gate.querySelector('[data-ruo-enter]');
+      var exit = gate.querySelector('[data-ruo-exit]');
+      if (chk && enter) {
+        enter.disabled = true;
+        chk.addEventListener('change', function () { enter.disabled = !chk.checked; });
+        enter.addEventListener('click', function () {
+          if (!chk.checked) return;
+          localStorage.setItem(GKEY, '1');
+          gate.setAttribute('hidden', '');
+          document.body.style.overflow = '';
+        });
+      }
+      if (exit) exit.addEventListener('click', function () { window.location.href = 'index.html'; });
+    }
+  }
+
+  /* ---------- Category filters (products page) ---------- */
+  var pills = document.querySelectorAll('.cat-pill');
+  if (pills.length) {
+    var cards = document.querySelectorAll('.product-grid .product-card');
+    pills.forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        pills.forEach(function (p) { p.classList.remove('active'); });
+        pill.classList.add('active');
+        var f = pill.getAttribute('data-filter');
+        cards.forEach(function (card) {
+          var show = (f === 'all') || (card.getAttribute('data-category') === f);
+          card.classList.toggle('is-hidden', !show);
+        });
+      });
     });
   }
 

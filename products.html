@@ -3,15 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products — Vertex Biolabs</title>
-  <meta name="description" content="Browse the full Vertex Biolabs collection of small-batch, naturally sourced supplements." />
+  <title>Research Peptides — Vertex Biolabs</title>
+  <meta name="description" content="High-purity research peptides from Vertex Biolabs — HPLC & mass-spec tested, batch-traceable, with a certificate of analysis on every order. For laboratory research use only." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+
+  <!-- ============ RESEARCH-USE GATE ============ -->
+  <div class="ruo-gate" id="ruo-gate">
+    <div class="ruo-card">
+      <svg class="logo-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#2563eb"/><path d="M20 9 L27 28 L20 23 L13 28 Z" fill="#ffffff"/></svg>
+      <h2>Research use only</h2>
+      <p>Vertex Biolabs supplies compounds strictly for laboratory and in-vitro research. Products are not for human or veterinary use.</p>
+      <label class="ruo-check" for="ruo-confirm">
+        <input type="checkbox" id="ruo-confirm" />
+        <span>I confirm I am 21 or older and a qualified researcher, and that I will use these products for laboratory research only — not for human or veterinary use.</span>
+      </label>
+      <div class="ruo-actions">
+        <button class="btn btn-outline" type="button" data-ruo-exit>Exit</button>
+        <button class="btn btn-primary" type="button" data-ruo-enter disabled>Enter store</button>
+      </div>
+      <p class="ruo-fine">Not for human use · Not for veterinary use · Not for food use</p>
+    </div>
+  </div>
+
+  <!-- ============ ANNOUNCEMENT MARQUEE ============ -->
+  <div class="announce">
+    <div class="marquee" aria-hidden="true">
+      <span><b>99%+ purity</b> — HPLC &amp; mass-spec verified</span>
+      <span><b>CoA</b> included on every lot</span>
+      <span><b>Ships within 24h</b> · free U.S. shipping over $60</span>
+      <span><b>3rd-party tested</b> in U.S. labs</span>
+      <span><b>99%+ purity</b> — HPLC &amp; mass-spec verified</span>
+      <span><b>CoA</b> included on every lot</span>
+      <span><b>Ships within 24h</b> · free U.S. shipping over $60</span>
+      <span><b>3rd-party tested</b> in U.S. labs</span>
+    </div>
+  </div>
 
   <!-- ============ HEADER ============ -->
   <header class="site-header">
@@ -41,280 +73,371 @@
   <!-- ============ PAGE HERO ============ -->
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow">The Collection</span>
-      <h1>Shop our small-batch blends</h1>
-      <p>Clean, naturally sourced supplements — mixed, capped, and labeled by hand. Free shipping on orders over $60.</p>
+      <span class="eyebrow">The Collection · Research Use Only</span>
+      <h1>Research peptides, verified to the lot</h1>
+      <p>High-purity research compounds — HPLC and mass-spec tested, batch-traceable, with a certificate of analysis on every order. Free U.S. shipping over $60.</p>
     </div>
   </section>
 
-  <!-- ============ PRODUCTS (3 × 5) ============ -->
+  <!-- ============ TRUST STRIP ============ -->
+  <div class="trust-strip">
+    <div class="container">
+      <span>99%+ purity verified</span>
+      <span>HPLC + mass-spec tested</span>
+      <span>3rd-party lab tested</span>
+      <span>CoA with every order</span>
+    </div>
+  </div>
+
+  <!-- ============ PRODUCTS ============ -->
   <section style="padding-top:56px;">
     <div class="container">
+
+      <!-- Category filters -->
+      <div class="cat-filters">
+        <button class="cat-pill active" type="button" data-filter="all">All</button>
+        <button class="cat-pill" type="button" data-filter="recovery">Recovery</button>
+        <button class="cat-pill" type="button" data-filter="metabolic">Metabolic</button>
+        <button class="cat-pill" type="button" data-filter="growth">Growth</button>
+        <button class="cat-pill" type="button" data-filter="longevity">Longevity</button>
+        <button class="cat-pill" type="button" data-filter="cognitive">Cognitive</button>
+        <button class="cat-pill" type="button" data-filter="sleep">Sleep</button>
+        <button class="cat-pill" type="button" data-filter="skin">Skin &amp; Anti-Aging</button>
+      </div>
+
       <div class="product-grid">
 
-        <!-- 1 -->
-        <article class="product-card">
+        <!-- 1 BPC-157 -->
+        <article class="product-card" data-category="recovery">
           <div class="product-thumb" style="background:linear-gradient(150deg,#eef2f9,#dbe4f3);">
-            <span class="product-tag">Bestseller</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#2563eb"/><text x="60" y="92" text-anchor="middle" font-family="Fraunces, serif" font-size="10" fill="#ffffff">CALM ROOTS</text></svg>
+            <span class="product-tag">Bestseller</span><span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#2563eb"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#ffffff">BPC-157</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">5 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Stress &amp; Balance</p>
-            <h3>Calm Roots</h3>
-            <p class="product-desc">Ashwagandha &amp; magnesium blend to support a calm, balanced mood and steady response to everyday stress.*</p>
+            <p class="product-cat">Recovery</p>
+            <h3>BPC-157 <span class="product-size">5 mg</span></h3>
+            <p class="product-desc">One of the most-studied peptides in tissue-repair and recovery research.*</p>
             <div class="product-foot">
-              <span class="price">$32 <small>/ 60 ct</small></span>
-              <button class="btn btn-primary js-add" data-id="calm-roots" data-name="Calm Roots — Ashwagandha &amp; Magnesium" data-price="32.00">Add to cart</button>
+              <span class="price">$54.99</span>
+              <button class="btn btn-primary js-add" data-id="bpc-157-5mg" data-name="BPC-157 — 5 mg (Research Use Only)" data-price="54.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 2 -->
-        <article class="product-card">
+        <!-- 2 TB-500 -->
+        <article class="product-card" data-category="recovery">
           <div class="product-thumb" style="background:linear-gradient(150deg,#eaf0fb,#cfe0f7);">
-            <span class="product-tag">New</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#3b82f6"/><text x="60" y="92" text-anchor="middle" font-family="Fraunces, serif" font-size="9.5" fill="#ffffff">DAILY GREENS</text></svg>
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#1d4ed8"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#ffffff">TB-500</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">5 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Daily Wellness</p>
-            <h3>Daily Greens</h3>
-            <p class="product-desc">Organic superfood powder with 12 leafy greens and sprouts to support everyday energy and vitality.*</p>
+            <p class="product-cat">Recovery</p>
+            <h3>TB-500 <span class="product-size">5 mg</span></h3>
+            <p class="product-desc">A synthetic thymosin β4 fragment studied in cellular-repair research.*</p>
             <div class="product-foot">
-              <span class="price">$38 <small>/ 30 srv</small></span>
-              <button class="btn btn-primary js-add" data-id="daily-greens" data-name="Daily Greens — Organic Superfood Powder" data-price="38.00">Add to cart</button>
+              <span class="price">$64.99</span>
+              <button class="btn btn-primary js-add" data-id="tb-500-5mg" data-name="TB-500 — 5 mg (Research Use Only)" data-price="64.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 3 -->
-        <article class="product-card">
+        <!-- 3 Wolverine Blend -->
+        <article class="product-card" data-category="recovery">
           <div class="product-thumb" style="background:linear-gradient(150deg,#e7ecf6,#c7d6ee);">
-            <span class="product-tag">Bestseller</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#1e3a8a"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#ffffff">GOLDEN</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#ffffff">TURMERIC</text></svg>
+            <span class="product-tag">Bestseller</span><span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#0f1216"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="6" fill="#ffffff">WOLVERINE</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">10 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Joint &amp; Recovery</p>
-            <h3>Golden Turmeric</h3>
-            <p class="product-desc">Turmeric &amp; black pepper (for absorption) to support healthy joints and post-activity recovery.*</p>
+            <p class="product-cat">Recovery · Blend</p>
+            <h3>Wolverine Blend <span class="product-size">10 mg</span></h3>
+            <p class="product-desc">BPC-157 + TB-500 combined for recovery-focused research protocols.*</p>
             <div class="product-foot">
-              <span class="price">$28 <small>/ 90 ct</small></span>
-              <button class="btn btn-primary js-add" data-id="golden-turmeric" data-name="Golden Turmeric — Turmeric &amp; Black Pepper" data-price="28.00">Add to cart</button>
+              <span class="price">$99.99</span>
+              <button class="btn btn-primary js-add" data-id="wolverine-10mg" data-name="Wolverine Blend (BPC-157/TB-500) — 10 mg (Research Use Only)" data-price="99.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 4 -->
-        <article class="product-card">
+        <!-- 4 KLOW Blend -->
+        <article class="product-card" data-category="recovery">
           <div class="product-thumb" style="background:linear-gradient(150deg,#f0f3f8,#e2e8f1);">
-            <span class="product-tag">Seasonal</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#1d4ed8"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="9.5" fill="#ffffff">IMMUNE</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="9.5" fill="#ffffff">SHIELD</text></svg>
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#0f1216"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#ffffff">KLOW</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">70 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Immune Support</p>
-            <h3>Immune Shield</h3>
-            <p class="product-desc">Elderberry, zinc &amp; vitamin C blend to support a healthy immune system year-round.*</p>
+            <p class="product-cat">Recovery · Blend</p>
+            <h3>KLOW Blend <span class="product-size">70 mg</span></h3>
+            <p class="product-desc">GHK-Cu, TB-500, BPC-157 &amp; KPV multi-peptide research blend.*</p>
             <div class="product-foot">
-              <span class="price">$30 <small>/ 60 ct</small></span>
-              <button class="btn btn-primary js-add" data-id="immune-shield" data-name="Immune Shield — Elderberry, Zinc &amp; Vitamin C" data-price="30.00">Add to cart</button>
+              <span class="price">$129.99</span>
+              <button class="btn btn-primary js-add" data-id="klow-70mg" data-name="KLOW Blend (GHK-Cu/TB-500/BPC-157/KPV) — 70 mg (Research Use Only)" data-price="129.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 5 -->
-        <article class="product-card">
+        <!-- 5 GHK-Cu -->
+        <article class="product-card" data-category="skin">
           <div class="product-thumb" style="background:linear-gradient(150deg,#edf1f8,#d6e1f1);">
-            <span class="product-tag">Bestseller</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#0f1216"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="9.5" fill="#ffffff">RESTFUL</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="9.5" fill="#ffffff">NIGHT</text></svg>
+            <span class="product-tag">Bestseller</span><span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#1e40af"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#ffffff">GHK-CU</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">50 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Sleep &amp; Relaxation</p>
-            <h3>Restful Night</h3>
-            <p class="product-desc">Magnesium glycinate &amp; chamomile to support relaxation and restful, quality sleep.*</p>
+            <p class="product-cat">Skin &amp; Anti-Aging</p>
+            <h3>GHK-Cu <span class="product-size">50 mg</span></h3>
+            <p class="product-desc">Copper peptide studied in skin, collagen, and anti-aging research.*</p>
             <div class="product-foot">
-              <span class="price">$26 <small>/ 60 ct</small></span>
-              <button class="btn btn-primary js-add" data-id="restful-night" data-name="Restful Night — Magnesium &amp; Chamomile" data-price="26.00">Add to cart</button>
+              <span class="price">$59.99</span>
+              <button class="btn btn-primary js-add" data-id="ghk-cu-50mg" data-name="GHK-Cu — 50 mg (Research Use Only)" data-price="59.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 6 -->
-        <article class="product-card">
+        <!-- 6 Glow Blend -->
+        <article class="product-card" data-category="skin">
           <div class="product-thumb" style="background:linear-gradient(150deg,#eef2f9,#dbe4f3);">
-            <span class="product-tag">New</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#2563eb"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="10" fill="#ffffff">CLEAR</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="10" fill="#ffffff">FOCUS</text></svg>
+            <span class="product-tag">New</span><span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#0f1216"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#ffffff">GLOW</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">60 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Focus &amp; Clarity</p>
-            <h3>Clear Focus</h3>
-            <p class="product-desc">Lion’s mane &amp; B-complex to support mental clarity, focus, and a sharp daily mindset.*</p>
+            <p class="product-cat">Skin &amp; Anti-Aging · Blend</p>
+            <h3>Glow Blend <span class="product-size">60 mg</span></h3>
+            <p class="product-desc">GHK-Cu, TB-500 &amp; BPC-157 blend for skin and recovery research.*</p>
             <div class="product-foot">
-              <span class="price">$34 <small>/ 60 ct</small></span>
-              <button class="btn btn-primary js-add" data-id="clear-focus" data-name="Clear Focus — Lion’s Mane &amp; B-Complex" data-price="34.00">Add to cart</button>
+              <span class="price">$109.99</span>
+              <button class="btn btn-primary js-add" data-id="glow-60mg" data-name="Glow Blend (GHK-Cu/TB-500/BPC-157) — 60 mg (Research Use Only)" data-price="109.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 7 -->
-        <article class="product-card">
+        <!-- 7 5-Amino-1MQ -->
+        <article class="product-card" data-category="metabolic">
           <div class="product-thumb" style="background:linear-gradient(150deg,#eaf0fb,#cfe0f7);">
-            <span class="product-tag">Bestseller</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#1e40af"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="10" fill="#ffffff">OMEGA</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="10" fill="#ffffff">PURE</text></svg>
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#2563eb"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="5.5" fill="#ffffff">5-AMINO-1MQ</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">50 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Heart &amp; Brain</p>
-            <h3>Omega Pure</h3>
-            <p class="product-desc">Wild-caught fish oil with EPA &amp; DHA to support heart, brain, and joint health.*</p>
+            <p class="product-cat">Metabolic</p>
+            <h3>5-Amino-1MQ <span class="product-size">50 mg</span></h3>
+            <p class="product-desc">A small molecule studied in metabolic and energy-regulation research.*</p>
             <div class="product-foot">
-              <span class="price">$29 <small>/ 90 ct</small></span>
-              <button class="btn btn-primary js-add" data-id="omega-pure" data-name="Omega Pure — Wild Fish Oil EPA/DHA" data-price="29.00">Add to cart</button>
+              <span class="price">$49.99</span>
+              <button class="btn btn-primary js-add" data-id="5amino1mq-50mg" data-name="5-Amino-1MQ — 50 mg (Research Use Only)" data-price="49.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 8 -->
-        <article class="product-card">
+        <!-- 8 AOD-9604 -->
+        <article class="product-card" data-category="metabolic">
           <div class="product-thumb" style="background:linear-gradient(150deg,#e7ecf6,#c7d6ee);">
-            <span class="product-tag">Bestseller</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#3b82f6"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="9.5" fill="#ffffff">GUT</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="9.5" fill="#ffffff">HARMONY</text></svg>
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#1d4ed8"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="6.5" fill="#ffffff">AOD-9604</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">5 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Digestive Health</p>
-            <h3>Gut Harmony</h3>
-            <p class="product-desc">Probiotic &amp; prebiotic blend with 10 strains to support digestion and gut balance.*</p>
+            <p class="product-cat">Metabolic</p>
+            <h3>AOD-9604 <span class="product-size">5 mg</span></h3>
+            <p class="product-desc">A modified peptide fragment investigated in metabolic research.*</p>
             <div class="product-foot">
-              <span class="price">$36 <small>/ 30 ct</small></span>
-              <button class="btn btn-primary js-add" data-id="gut-harmony" data-name="Gut Harmony — Probiotic &amp; Prebiotic Blend" data-price="36.00">Add to cart</button>
+              <span class="price">$49.99</span>
+              <button class="btn btn-primary js-add" data-id="aod-9604-5mg" data-name="AOD-9604 — 5 mg (Research Use Only)" data-price="49.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 9 -->
-        <article class="product-card">
+        <!-- 9 Cagrilintide -->
+        <article class="product-card" data-category="metabolic">
           <div class="product-thumb" style="background:linear-gradient(150deg,#f0f3f8,#e2e8f1);">
-            <span class="product-tag">Staple</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#1d4ed8"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="11" fill="#ffffff">VITAL</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#ffffff">D3 + K2</text></svg>
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#1e3a8a"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="5.5" fill="#ffffff">CAGRILINTIDE</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">10 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Bone &amp; Immunity</p>
-            <h3>Vital D3 + K2</h3>
-            <p class="product-desc">Vitamin D3 paired with K2 to support bone strength, immunity, and healthy calcium use.*</p>
+            <p class="product-cat">Metabolic</p>
+            <h3>Cagrilintide <span class="product-size">10 mg</span></h3>
+            <p class="product-desc">An amylin analog studied in appetite and metabolic research models.*</p>
             <div class="product-foot">
-              <span class="price">$22 <small>/ 90 ct</small></span>
-              <button class="btn btn-primary js-add" data-id="vital-d3k2" data-name="Vital D3 + K2 — Vitamin D3 with K2" data-price="22.00">Add to cart</button>
+              <span class="price">$69.99</span>
+              <button class="btn btn-primary js-add" data-id="cagrilintide-10mg" data-name="Cagrilintide — 10 mg (Research Use Only)" data-price="69.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 10 -->
-        <article class="product-card">
+        <!-- 10 GLP-3 (RT) -->
+        <article class="product-card" data-category="metabolic">
           <div class="product-thumb" style="background:linear-gradient(150deg,#edf1f8,#d6e1f1);">
-            <span class="product-tag">Staple</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#1e3a8a"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="10" fill="#ffffff">IRON</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="10" fill="#ffffff">BLOOM</text></svg>
+            <span class="product-tag">New</span><span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#3b82f6"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#ffffff">GLP-3 RT</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">10 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Energy &amp; Blood</p>
-            <h3>Iron Bloom</h3>
-            <p class="product-desc">Gentle, non-constipating iron with vitamin C to support healthy energy and iron levels.*</p>
+            <p class="product-cat">Metabolic</p>
+            <h3>GLP-3 (RT) <span class="product-size">10 mg</span></h3>
+            <p class="product-desc">A GLP-class research peptide for metabolic-pathway studies.*</p>
             <div class="product-foot">
-              <span class="price">$20 <small>/ 60 ct</small></span>
-              <button class="btn btn-primary js-add" data-id="iron-bloom" data-name="Iron Bloom — Gentle Iron &amp; Vitamin C" data-price="20.00">Add to cart</button>
+              <span class="price">$69.99</span>
+              <button class="btn btn-primary js-add" data-id="glp3-rt-10mg" data-name="GLP-3 (RT) — 10 mg (Research Use Only)" data-price="69.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 11 -->
-        <article class="product-card">
+        <!-- 11 Ipamorelin -->
+        <article class="product-card" data-category="growth">
           <div class="product-thumb" style="background:linear-gradient(150deg,#eef2f9,#dbe4f3);">
-            <span class="product-tag">New</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#2563eb"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#ffffff">COLLAGEN</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#ffffff">GLOW</text></svg>
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#2563eb"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="5.5" fill="#ffffff">IPAMORELIN</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">5 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Skin, Hair &amp; Nails</p>
-            <h3>Collagen Glow</h3>
-            <p class="product-desc">Marine collagen peptides with vitamin C to support skin elasticity, hair, and nails.*</p>
+            <p class="product-cat">Growth</p>
+            <h3>Ipamorelin <span class="product-size">5 mg</span></h3>
+            <p class="product-desc">A selective secretagogue studied in growth-signaling research.*</p>
             <div class="product-foot">
-              <span class="price">$40 <small>/ 30 srv</small></span>
-              <button class="btn btn-primary js-add" data-id="collagen-glow" data-name="Collagen Glow — Marine Collagen Peptides" data-price="40.00">Add to cart</button>
+              <span class="price">$44.99</span>
+              <button class="btn btn-primary js-add" data-id="ipamorelin-5mg" data-name="Ipamorelin — 5 mg (Research Use Only)" data-price="44.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 12 -->
-        <article class="product-card">
+        <!-- 12 Tesamorelin -->
+        <article class="product-card" data-category="growth">
           <div class="product-thumb" style="background:linear-gradient(150deg,#eaf0fb,#cfe0f7);">
-            <span class="product-tag">Bestseller</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#0f1216"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="9.5" fill="#ffffff">POWER</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="9.5" fill="#ffffff">REDS</text></svg>
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#1d4ed8"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="5.5" fill="#ffffff">TESAMORELIN</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">10 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Daily Wellness</p>
-            <h3>Power Reds</h3>
-            <p class="product-desc">Antioxidant berry &amp; beet blend to support circulation, energy, and recovery.*</p>
+            <p class="product-cat">Growth</p>
+            <h3>Tesamorelin <span class="product-size">10 mg</span></h3>
+            <p class="product-desc">A GHRH analog investigated in growth and metabolic research.*</p>
             <div class="product-foot">
-              <span class="price">$39 <small>/ 30 srv</small></span>
-              <button class="btn btn-primary js-add" data-id="power-reds" data-name="Power Reds — Antioxidant Berry Blend" data-price="39.00">Add to cart</button>
+              <span class="price">$69.99</span>
+              <button class="btn btn-primary js-add" data-id="tesamorelin-10mg" data-name="Tesamorelin — 10 mg (Research Use Only)" data-price="69.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 13 -->
-        <article class="product-card">
+        <!-- 13 IGF-1 LR3 -->
+        <article class="product-card" data-category="growth">
           <div class="product-thumb" style="background:linear-gradient(150deg,#e7ecf6,#c7d6ee);">
-            <span class="product-tag">Staple</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#1d4ed8"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="9.5" fill="#ffffff">ADAPT</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="9.5" fill="#ffffff">BALANCE</text></svg>
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#1e40af"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="6.5" fill="#ffffff">IGF-1 LR3</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">1 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Stress &amp; Balance</p>
-            <h3>Adapt Balance</h3>
-            <p class="product-desc">Rhodiola &amp; holy basil adaptogens to support resilience and a steady mood.*</p>
+            <p class="product-cat">Growth</p>
+            <h3>IGF-1 LR3 <span class="product-size">1 mg</span></h3>
+            <p class="product-desc">A long-acting IGF-1 analog used in cellular-growth research.*</p>
             <div class="product-foot">
-              <span class="price">$31 <small>/ 60 ct</small></span>
-              <button class="btn btn-primary js-add" data-id="adapt-balance" data-name="Adapt Balance — Rhodiola &amp; Holy Basil" data-price="31.00">Add to cart</button>
+              <span class="price">$89.99</span>
+              <button class="btn btn-primary js-add" data-id="igf1-lr3-1mg" data-name="IGF-1 LR3 — 1 mg (Research Use Only)" data-price="89.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 14 -->
-        <article class="product-card">
+        <!-- 14 NAD+ -->
+        <article class="product-card" data-category="longevity">
           <div class="product-thumb" style="background:linear-gradient(150deg,#f0f3f8,#e2e8f1);">
-            <span class="product-tag">Staple</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#1e40af"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="10" fill="#ffffff">JOINT</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="10" fill="#ffffff">FLEX</text></svg>
+            <span class="product-tag">Bestseller</span><span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#2563eb"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="8" fill="#ffffff">NAD+</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">500 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Joint &amp; Recovery</p>
-            <h3>Joint Flex</h3>
-            <p class="product-desc">Glucosamine, chondroitin &amp; MSM to support joint comfort and mobility.*</p>
+            <p class="product-cat">Longevity</p>
+            <h3>NAD+ <span class="product-size">500 mg</span></h3>
+            <p class="product-desc">A coenzyme central to cellular-energy and longevity research.*</p>
             <div class="product-foot">
-              <span class="price">$33 <small>/ 90 ct</small></span>
-              <button class="btn btn-primary js-add" data-id="joint-flex" data-name="Joint Flex — Glucosamine &amp; MSM" data-price="33.00">Add to cart</button>
+              <span class="price">$79.99</span>
+              <button class="btn btn-primary js-add" data-id="nad-500mg" data-name="NAD+ — 500 mg (Research Use Only)" data-price="79.99">Add to cart</button>
             </div>
           </div>
         </article>
 
-        <!-- 15 -->
-        <article class="product-card">
+        <!-- 15 MOTS-C -->
+        <article class="product-card" data-category="longevity">
           <div class="product-thumb" style="background:linear-gradient(150deg,#edf1f8,#d6e1f1);">
-            <span class="product-tag">New</span>
-            <svg class="bottle" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="44" y="4" width="32" height="16" rx="4" fill="#dfe6f2"/><rect x="30" y="18" width="60" height="130" rx="16" fill="#f7f9fc"/><rect x="30" y="56" width="60" height="66" rx="6" fill="#3b82f6"/><text x="60" y="88" text-anchor="middle" font-family="Fraunces, serif" font-size="9" fill="#ffffff">HYDRA</text><text x="60" y="100" text-anchor="middle" font-family="Fraunces, serif" font-size="7.5" fill="#ffffff">ELECTROLYTES</text></svg>
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#1e3a8a"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#ffffff">MOTS-C</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">10 MG</text></svg>
           </div>
           <div class="product-body">
-            <p class="product-cat">Hydration</p>
-            <h3>Hydra Electrolytes</h3>
-            <p class="product-desc">Sugar-free electrolyte mix with sodium, potassium &amp; magnesium to support hydration.*</p>
+            <p class="product-cat">Longevity</p>
+            <h3>MOTS-C <span class="product-size">10 mg</span></h3>
+            <p class="product-desc">A mitochondrial-derived peptide studied in metabolic-longevity research.*</p>
             <div class="product-foot">
-              <span class="price">$24 <small>/ 30 srv</small></span>
-              <button class="btn btn-primary js-add" data-id="hydra-electrolytes" data-name="Hydra Electrolytes — Sugar-Free Electrolyte Mix" data-price="24.00">Add to cart</button>
+              <span class="price">$39.99</span>
+              <button class="btn btn-primary js-add" data-id="mots-c-10mg" data-name="MOTS-C — 10 mg (Research Use Only)" data-price="39.99">Add to cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 16 Epithalon -->
+        <article class="product-card" data-category="longevity">
+          <div class="product-thumb" style="background:linear-gradient(150deg,#eef2f9,#dbe4f3);">
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#1d4ed8"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="6.5" fill="#ffffff">EPITHALON</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">10 MG</text></svg>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Longevity</p>
+            <h3>Epithalon <span class="product-size">10 mg</span></h3>
+            <p class="product-desc">A tetrapeptide studied in cellular-aging and telomere research.*</p>
+            <div class="product-foot">
+              <span class="price">$54.99</span>
+              <button class="btn btn-primary js-add" data-id="epithalon-10mg" data-name="Epithalon — 10 mg (Research Use Only)" data-price="54.99">Add to cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 17 Semax -->
+        <article class="product-card" data-category="cognitive">
+          <div class="product-thumb" style="background:linear-gradient(150deg,#eaf0fb,#cfe0f7);">
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#2563eb"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#ffffff">SEMAX</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">30 MG</text></svg>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Cognitive</p>
+            <h3>Semax <span class="product-size">30 mg</span></h3>
+            <p class="product-desc">A peptide studied in cognition, focus, and neuro research models.*</p>
+            <div class="product-foot">
+              <span class="price">$49.99</span>
+              <button class="btn btn-primary js-add" data-id="semax-30mg" data-name="Semax — 30 mg (Research Use Only)" data-price="49.99">Add to cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 18 Selank -->
+        <article class="product-card" data-category="cognitive">
+          <div class="product-thumb" style="background:linear-gradient(150deg,#e7ecf6,#c7d6ee);">
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#1e40af"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#ffffff">SELANK</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">10 MG</text></svg>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Cognitive</p>
+            <h3>Selank <span class="product-size">10 mg</span></h3>
+            <p class="product-desc">An anxiolytic-class research peptide studied in behavioral models.*</p>
+            <div class="product-foot">
+              <span class="price">$44.99</span>
+              <button class="btn btn-primary js-add" data-id="selank-10mg" data-name="Selank — 10 mg (Research Use Only)" data-price="44.99">Add to cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 19 DSIP -->
+        <article class="product-card" data-category="sleep">
+          <div class="product-thumb" style="background:linear-gradient(150deg,#f0f3f8,#e2e8f1);">
+            <span class="purity-badge">99%+</span>
+            <svg class="vial" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="48" y="6" width="24" height="9" rx="2" fill="#aebfdb"/><rect x="45" y="13" width="30" height="10" rx="2" fill="#cdd8ea"/><rect x="50" y="21" width="20" height="6" fill="#e2e8f1"/><rect x="42" y="26" width="36" height="124" rx="9" fill="#f7f9fc" stroke="#dfe6f2" stroke-width="1.5"/><rect x="42" y="60" width="36" height="54" fill="#1d4ed8"/><text x="60" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#ffffff">DSIP</text><text x="60" y="98" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#cdd8ea">5 MG</text></svg>
+          </div>
+          <div class="product-body">
+            <p class="product-cat">Sleep</p>
+            <h3>DSIP <span class="product-size">5 mg</span></h3>
+            <p class="product-desc">Delta sleep-inducing peptide studied in sleep-cycle research.*</p>
+            <div class="product-foot">
+              <span class="price">$39.99</span>
+              <button class="btn btn-primary js-add" data-id="dsip-5mg" data-name="DSIP — 5 mg (Research Use Only)" data-price="39.99">Add to cart</button>
             </div>
           </div>
         </article>
 
       </div>
 
-      <!-- Bundle note -->
+      <!-- Bulk CTA -->
       <div style="margin-top:56px;">
         <div class="cta-band">
-          <h2>Build your own bundle &amp; save</h2>
-          <p>Add any 3 products to your cart and use code <strong>RITUAL15</strong> at checkout for 15% off. Mix and match to fit your routine.</p>
-          <button class="btn btn-light js-cart-open">View cart</button>
+          <h2>Bulk &amp; research-order pricing</h2>
+          <p>Running a larger study? Per-vial pricing drops at higher volumes. Contact us for a bulk quote, lot reservations, and certificates of analysis.</p>
+          <a href="contact.html" class="btn btn-light">Request bulk pricing</a>
         </div>
       </div>
     </div>
@@ -325,20 +448,20 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="index.html" style="color:var(--white);"><svg class="logo-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#2563eb"/><path d="M20 9 L27 28 L20 23 L13 28 Z" fill="#0f1216"/></svg> Vertex Biolabs</a>
-          <p>Small-batch, naturally sourced supplements made by hand with clean ingredients and full transparency.</p>
+          <a class="brand" href="index.html" style="color:var(--white);"><svg class="logo-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#2563eb"/><path d="M20 9 L27 28 L20 23 L13 28 Z" fill="#0b0e13"/></svg> Vertex Biolabs</a>
+          <p>High-purity research peptides — HPLC &amp; mass-spec tested, batch-traceable, with a certificate of analysis on every order.</p>
         </div>
-        <div><h4>Shop</h4><a href="products.html">All products</a><a href="products.html">Bestsellers</a><a href="products.html">New arrivals</a></div>
+        <div><h4>Shop</h4><a href="products.html">All compounds</a><a href="products.html">Bestsellers</a><a href="products.html">New arrivals</a></div>
         <div><h4>Company</h4><a href="research.html">Research</a><a href="contact.html">Contact</a><a href="research.html">Lab results</a></div>
         <div><h4>Help</h4><a href="contact.html">Shipping &amp; returns</a><a href="contact.html">FAQ</a><a href="contact.html">Get in touch</a></div>
       </div>
       <div class="disclaimer">
-        <strong>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</strong>
-        Vertex Biolabs products are dietary supplements. Consult your healthcare provider before use if you are pregnant, nursing, taking medication, or have a medical condition. Keep out of reach of children.
+        <strong>For laboratory and in-vitro research use only.</strong>
+        Vertex Biolabs research compounds are not for human or veterinary use, and not for use in diagnostic, therapeutic, or food applications. By purchasing, you confirm you are a qualified researcher and will handle these materials in accordance with all applicable laws and regulations. All compounds are HPLC and mass-spec tested to 99%+ purity, with a certificate of analysis available for every lot.
       </div>
       <div class="footer-bottom">
         <span>© <span data-year>2026</span> Vertex Biolabs. All rights reserved.</span>
-        <span>Made in small batches 🌿</span>
+        <span>Batch-tested · CoA on every lot 🧪</span>
       </div>
     </div>
   </footer>
