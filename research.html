@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=3" />
 </head>
 <body>
 
@@ -29,7 +29,7 @@
   <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html"><svg class="logo-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#2563eb"/><path d="M20 9 L27 28 L20 23 L13 28 Z" fill="#ffffff"/></svg> Vertex Biolabs</a>
+      <a class="brand" href="index.html"><img class="logo-mark" src="assets/img/vertex-mark.png" alt="Vertex Biolabs" /> Vertex Biolabs</a>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -101,6 +101,229 @@
     </div>
   </section>
 
+  <!-- ============ HOW TO READ A COA ============ -->
+  <section style="background:var(--paper);">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Certificates of analysis</span><h2>Every compound, independently verified</h2><p>Each result below comes from <strong>Janoshik Analytical</strong>, an independent third-party lab — not from us. Here’s how to read one before you scroll the reports.</p></div>
+      <div class="coa-legend">
+        <div class="leg reveal"><span class="k"><span class="num">1</span>Purity %</span><p>The share of the sample that is the target compound, measured by HPLC. Higher means fewer impurities — our standard is 99%+.</p></div>
+        <div class="leg reveal d1"><span class="k"><span class="num">2</span>Batch / Lot #</span><p>The unique ID for that production run. It links the certificate to the exact vial, so results are traceable.</p></div>
+        <div class="leg reveal d2"><span class="k"><span class="num">3</span>Test method</span><p>HPLC separates and quantifies the compound; mass spectrometry confirms its molecular weight and identity.</p></div>
+        <div class="leg reveal"><span class="k"><span class="num">4</span>Sample tested</span><p>The compound and label strength that was submitted to the lab for analysis.</p></div>
+        <div class="leg reveal d1"><span class="k"><span class="num">5</span>Measured content</span><p>The actual mass of compound found in the vial — confirming it meets or exceeds the labelled amount.</p></div>
+        <div class="leg reveal d2"><span class="k"><span class="num">6</span>Report &amp; verification</span><p>Every Janoshik report carries a task number and a unique key/QR you can re-check at janoshik.com/verify.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COA CARDS ============ -->
+  <section>
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">The lab results</span><h2>Purity, batch &amp; content for all 10 compounds</h2><p>Third-party HPLC &amp; mass-spec analysis for every product in the catalog.</p></div>
+
+      <div class="coa-grid">
+
+        <!-- 1 GLP-3 Retatrutide -->
+        <article class="coa-card reveal">
+          <div class="coa-head"><div><span class="coa-cat">Metabolic</span><h3>GLP-3 Retatrutide</h3></div><span class="coa-badge">✓ Verified</span></div>
+          <div class="coa-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <defs><linearGradient id="cg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs>
+              <circle cx="60" cy="60" r="54" fill="none" stroke="#e6eaf1" stroke-width="11"/>
+              <circle cx="60" cy="60" r="54" fill="none" stroke="url(#cg1)" stroke-width="11" stroke-linecap="round" stroke-dasharray="338.31 339.3" transform="rotate(-90 60 60)"/>
+              <text x="60" y="60" text-anchor="middle" class="coa-pct-num">99.711%</text>
+              <text x="60" y="75" text-anchor="middle" class="coa-pct-cap">HPLC PURITY</text>
+            </svg>
+          </div>
+          <div class="coa-data">
+            <div class="coa-row"><span>Sample tested</span><b>Retatrutide · 10 mg</b></div>
+            <div class="coa-row"><span>Measured content</span><b>11.02 mg</b></div>
+            <div class="coa-row"><span>Batch / Lot</span><b>RT10/202602</b></div>
+            <div class="coa-row"><span>Test method</span><b>HPLC + Mass Spec</b></div>
+            <div class="coa-row"><span>Lab · Report</span><b>Janoshik · #107364</b></div>
+          </div>
+        </article>
+
+        <!-- 2 GHK-Cu -->
+        <article class="coa-card reveal d1">
+          <div class="coa-head"><div><span class="coa-cat">Skin &amp; Anti-Aging</span><h3>GHK-Cu</h3></div><span class="coa-badge">✓ Verified</span></div>
+          <div class="coa-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <defs><linearGradient id="cg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs>
+              <circle cx="60" cy="60" r="54" fill="none" stroke="#e6eaf1" stroke-width="11"/>
+              <circle cx="60" cy="60" r="54" fill="none" stroke="url(#cg2)" stroke-width="11" stroke-linecap="round" stroke-dasharray="339.14 339.3" transform="rotate(-90 60 60)"/>
+              <text x="60" y="60" text-anchor="middle" class="coa-pct-num">99.954%</text>
+              <text x="60" y="75" text-anchor="middle" class="coa-pct-cap">HPLC PURITY</text>
+            </svg>
+          </div>
+          <div class="coa-data">
+            <div class="coa-row"><span>Sample tested</span><b>GHK-Cu · 50 mg</b></div>
+            <div class="coa-row"><span>Measured content</span><b>50.61 mg</b></div>
+            <div class="coa-row"><span>Batch / Lot</span><b>CU50/202509</b></div>
+            <div class="coa-row"><span>Test method</span><b>HPLC + Mass Spec</b></div>
+            <div class="coa-row"><span>Lab · Report</span><b>Janoshik · #79000</b></div>
+          </div>
+        </article>
+
+        <!-- 3 Wolverine (blend) -->
+        <article class="coa-card blend reveal">
+          <div class="coa-head"><div><span class="coa-cat">Recovery · Blend</span><h3>Wolverine</h3></div><span class="coa-badge">✓ Verified</span></div>
+          <div class="coa-comp">
+            <p class="coa-comp-title">Per-compound purity</p>
+            <div class="comp-row"><span class="comp-name">BPC-157</span><div class="comp-track"><i style="width:96.4%"></i></div><b>99.818%</b></div>
+            <div class="comp-row"><span class="comp-name">TB-500</span><div class="comp-track"><i style="width:94.6%"></i></div><b>99.730%</b></div>
+            <p class="coa-scale">Bar scale 95–100% · standalone HPLC purity of each component</p>
+          </div>
+          <div class="coa-data">
+            <div class="coa-row"><span>Sample tested</span><b>BPC-157 5 mg + TB-500 5 mg</b></div>
+            <div class="coa-row"><span>Measured content</span><b>5.48 mg + 5.14 mg</b></div>
+            <div class="coa-row"><span>Batch / Lot</span><b>BB10/2025-04</b></div>
+            <div class="coa-row"><span>Test method</span><b>HPLC + Mass Spec</b></div>
+            <div class="coa-row"><span>Lab · Report</span><b>Janoshik · #62216</b></div>
+          </div>
+        </article>
+
+        <!-- 4 Semax -->
+        <article class="coa-card reveal">
+          <div class="coa-head"><div><span class="coa-cat">Cognitive</span><h3>Semax</h3></div><span class="coa-badge">✓ Verified</span></div>
+          <div class="coa-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <defs><linearGradient id="cg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs>
+              <circle cx="60" cy="60" r="54" fill="none" stroke="#e6eaf1" stroke-width="11"/>
+              <circle cx="60" cy="60" r="54" fill="none" stroke="url(#cg3)" stroke-width="11" stroke-linecap="round" stroke-dasharray="338.93 339.3" transform="rotate(-90 60 60)"/>
+              <text x="60" y="60" text-anchor="middle" class="coa-pct-num">99.892%</text>
+              <text x="60" y="75" text-anchor="middle" class="coa-pct-cap">HPLC PURITY</text>
+            </svg>
+          </div>
+          <div class="coa-data">
+            <div class="coa-row"><span>Sample tested</span><b>Semax · 5 mg lot</b></div>
+            <div class="coa-row"><span>Measured content</span><b>5.70 mg</b></div>
+            <div class="coa-row"><span>Batch / Lot</span><b>XA5/202509</b></div>
+            <div class="coa-row"><span>Test method</span><b>HPLC + Mass Spec</b></div>
+            <div class="coa-row"><span>Lab · Report</span><b>Janoshik · #78999</b></div>
+          </div>
+        </article>
+
+        <!-- 5 Melanotan 2 -->
+        <article class="coa-card reveal d1">
+          <div class="coa-head"><div><span class="coa-cat">Skin &amp; Anti-Aging</span><h3>Melanotan 2</h3></div><span class="coa-badge">✓ Verified</span></div>
+          <div class="coa-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <defs><linearGradient id="cg4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs>
+              <circle cx="60" cy="60" r="54" fill="none" stroke="#e6eaf1" stroke-width="11"/>
+              <circle cx="60" cy="60" r="54" fill="none" stroke="url(#cg4)" stroke-width="11" stroke-linecap="round" stroke-dasharray="337.79 339.3" transform="rotate(-90 60 60)"/>
+              <text x="60" y="60" text-anchor="middle" class="coa-pct-num">99.555%</text>
+              <text x="60" y="75" text-anchor="middle" class="coa-pct-cap">HPLC PURITY</text>
+            </svg>
+          </div>
+          <div class="coa-data">
+            <div class="coa-row"><span>Sample tested</span><b>Melanotan 2 · 10 mg</b></div>
+            <div class="coa-row"><span>Measured content</span><b>10.42 mg</b></div>
+            <div class="coa-row"><span>Batch / Lot</span><b>ML10/2025-05</b></div>
+            <div class="coa-row"><span>Test method</span><b>HPLC + Mass Spec</b></div>
+            <div class="coa-row"><span>Lab · Report</span><b>Janoshik · #65282</b></div>
+          </div>
+        </article>
+
+        <!-- 6 CJC/Ipamorelin (blend) -->
+        <article class="coa-card blend reveal">
+          <div class="coa-head"><div><span class="coa-cat">Growth · Blend</span><h3>CJC/Ipamorelin</h3></div><span class="coa-badge">✓ Verified</span></div>
+          <div class="coa-comp">
+            <p class="coa-comp-title">Per-compound purity</p>
+            <div class="comp-row"><span class="comp-name">CJC-1295</span><div class="comp-track"><i style="width:93.1%"></i></div><b>99.653%</b></div>
+            <div class="comp-row"><span class="comp-name">Ipamorelin</span><div class="comp-track"><i style="width:95.2%"></i></div><b>99.760%</b></div>
+            <p class="coa-scale">Bar scale 95–100% · standalone HPLC purity of each component</p>
+          </div>
+          <div class="coa-data">
+            <div class="coa-row"><span>Sample tested</span><b>CJC-1295 (no DAC) 5 mg + Ipamorelin 5 mg</b></div>
+            <div class="coa-row"><span>Measured content</span><b>5.85 mg + 4.96 mg</b></div>
+            <div class="coa-row"><span>Batch / Lot</span><b>CP10/202602</b></div>
+            <div class="coa-row"><span>Test method</span><b>HPLC + Mass Spec</b></div>
+            <div class="coa-row"><span>Lab · Report</span><b>Janoshik · #107400</b></div>
+          </div>
+        </article>
+
+        <!-- 7 KLOW (blend) -->
+        <article class="coa-card blend reveal">
+          <div class="coa-head"><div><span class="coa-cat">Recovery · Blend</span><h3>KLOW</h3></div><span class="coa-badge">✓ Verified</span></div>
+          <div class="coa-comp">
+            <p class="coa-comp-title">Per-compound purity</p>
+            <div class="comp-row"><span class="comp-name">GHK-Cu</span><div class="comp-track"><i style="width:99.1%"></i></div><b>99.954%</b></div>
+            <div class="comp-row"><span class="comp-name">KPV</span><div class="comp-track"><i style="width:97.2%"></i></div><b>99.858%</b></div>
+            <div class="comp-row"><span class="comp-name">BPC-157</span><div class="comp-track"><i style="width:96.4%"></i></div><b>99.818%</b></div>
+            <div class="comp-row"><span class="comp-name">TB-500</span><div class="comp-track"><i style="width:94.6%"></i></div><b>99.730%</b></div>
+            <p class="coa-scale">Bar scale 95–100% · standalone HPLC purity of each component</p>
+          </div>
+          <div class="coa-data">
+            <div class="coa-row"><span>Sample tested</span><b>GHK-Cu / TB-500 / BPC-157 / KPV</b></div>
+            <div class="coa-row"><span>Component lots</span><b>CU50 · BT10 · BC10 · KPV10</b></div>
+            <div class="coa-row"><span>Test method</span><b>HPLC + Mass Spec</b></div>
+            <div class="coa-row"><span>Lab · Reports</span><b>Janoshik · #79000 / #107377 / #62214 / #80664</b></div>
+          </div>
+        </article>
+
+        <!-- 8 GLOW (blend) -->
+        <article class="coa-card blend reveal">
+          <div class="coa-head"><div><span class="coa-cat">Skin &amp; Anti-Aging · Blend</span><h3>GLOW</h3></div><span class="coa-badge">✓ Verified</span></div>
+          <div class="coa-comp">
+            <p class="coa-comp-title">Per-compound purity</p>
+            <div class="comp-row"><span class="comp-name">GHK-Cu</span><div class="comp-track"><i style="width:99.1%"></i></div><b>99.954%</b></div>
+            <div class="comp-row"><span class="comp-name">BPC-157</span><div class="comp-track"><i style="width:96.4%"></i></div><b>99.818%</b></div>
+            <div class="comp-row"><span class="comp-name">TB-500</span><div class="comp-track"><i style="width:94.6%"></i></div><b>99.730%</b></div>
+            <p class="coa-scale">Bar scale 95–100% · standalone HPLC purity of each component</p>
+          </div>
+          <div class="coa-data">
+            <div class="coa-row"><span>Sample tested</span><b>GHK-Cu + BPC-157 + TB-500</b></div>
+            <div class="coa-row"><span>Measured content</span><b>56.84 mg + 12.67 mg + 11.87 mg</b></div>
+            <div class="coa-row"><span>Batch / Lot</span><b>BBG70/202602</b></div>
+            <div class="coa-row"><span>Test method</span><b>HPLC + Mass Spec</b></div>
+            <div class="coa-row"><span>Lab · Report</span><b>Janoshik · #107372</b></div>
+          </div>
+        </article>
+
+        <!-- 9 MOTS-C -->
+        <article class="coa-card reveal">
+          <div class="coa-head"><div><span class="coa-cat">Longevity</span><h3>MOTS-C</h3></div><span class="coa-badge">✓ Verified</span></div>
+          <div class="coa-ring">
+            <svg viewBox="0 0 120 120" aria-hidden="true">
+              <defs><linearGradient id="cg5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs>
+              <circle cx="60" cy="60" r="54" fill="none" stroke="#e6eaf1" stroke-width="11"/>
+              <circle cx="60" cy="60" r="54" fill="none" stroke="url(#cg5)" stroke-width="11" stroke-linecap="round" stroke-dasharray="338.46 339.3" transform="rotate(-90 60 60)"/>
+              <text x="60" y="60" text-anchor="middle" class="coa-pct-num">99.753%</text>
+              <text x="60" y="75" text-anchor="middle" class="coa-pct-cap">HPLC PURITY</text>
+            </svg>
+          </div>
+          <div class="coa-data">
+            <div class="coa-row"><span>Sample tested</span><b>MOTS-c · 10 mg</b></div>
+            <div class="coa-row"><span>Measured content</span><b>10.35 mg</b></div>
+            <div class="coa-row"><span>Batch / Lot</span><b>MS10/2025-05</b></div>
+            <div class="coa-row"><span>Test method</span><b>HPLC + Mass Spec</b></div>
+            <div class="coa-row"><span>Lab · Report</span><b>Janoshik · #65279</b></div>
+          </div>
+        </article>
+
+        <!-- 10 NAD+ -->
+        <article class="coa-card content reveal d1">
+          <div class="coa-head"><div><span class="coa-cat">Longevity</span><h3>NAD+</h3></div><span class="coa-badge">✓ Verified</span></div>
+          <div class="coa-ring content-ring">
+            <div class="content-check">✓</div>
+            <span class="coa-ring-cap">Content assayed</span>
+          </div>
+          <div class="coa-data">
+            <div class="coa-row"><span>Sample tested</span><b>NAD+ · 500 mg</b></div>
+            <div class="coa-row"><span>Measured content</span><b>635.97 mg</b></div>
+            <div class="coa-row"><span>Batch / Lot</span><b>NJ500/202509</b></div>
+            <div class="coa-row"><span>Test method</span><b>HPLC (quantitative)</b></div>
+            <div class="coa-row"><span>Lab · Report</span><b>Janoshik · #78806</b></div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="coa-disclaimer reveal"><strong>About these certificates.</strong> Results shown are representative third-party reports (Janoshik Analytical) for each compound and lot we stock. Purity is reported for single-compound vials; multi-peptide blends list the verified purity and measured content of each component. The exact lot-specific certificate of analysis for your vial ships with your order — request it any time with your lot number.</p>
+    </div>
+  </section>
+
   <!-- ============ COMPOUND SPOTLIGHT ============ -->
   <section>
     <div class="container">
@@ -142,7 +365,7 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><a class="brand" href="index.html" style="color:#fff;"><svg class="logo-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#2563eb"/><path d="M20 9 L27 28 L20 23 L13 28 Z" fill="#0b0e13"/></svg> Vertex Biolabs</a><p>High-purity research peptides — HPLC &amp; mass-spec tested, batch-traceable, with a certificate of analysis on every order.</p></div>
+        <div class="footer-brand"><a class="brand" href="index.html" style="color:#fff;"><img class="logo-mark" src="assets/img/vertex-mark-light.png" alt="Vertex Biolabs" /> Vertex Biolabs</a><p>High-purity research peptides — HPLC &amp; mass-spec tested, batch-traceable, with a certificate of analysis on every order.</p></div>
         <div><h4>Shop</h4><a href="products.html">All compounds</a><a href="products.html">Bestsellers</a><a href="products.html">New arrivals</a></div>
         <div><h4>Company</h4><a href="research.html">Research &amp; testing</a><a href="contact.html">Contact</a><a href="research.html">Lab results / CoA</a></div>
         <div><h4>Help</h4><a href="contact.html">Shipping &amp; returns</a><a href="contact.html">FAQ</a><a href="contact.html">Bulk orders</a></div>
