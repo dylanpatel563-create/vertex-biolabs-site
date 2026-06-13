@@ -256,13 +256,16 @@
     });
   });
 
-  // Product cards link through to the detail page (image / card body)
+  // Whole product card links through to the detail page — clicking anywhere
+  // on the card navigates, except the Add-to-cart button (which still adds).
   document.querySelectorAll('.product-card').forEach(function (card) {
     var add = card.querySelector('.js-add');
     if (!add) return;
     var pid = add.getAttribute('data-id');
-    var thumb = card.querySelector('.product-thumb');
-    if (thumb) thumb.addEventListener('click', function () { window.location.href = 'product.html?id=' + encodeURIComponent(pid); });
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('.js-add')) return; // let add-to-cart do its thing
+      window.location.href = 'product.html?id=' + encodeURIComponent(pid);
+    });
   });
 
   // Expose a tiny cart API for the product-detail page

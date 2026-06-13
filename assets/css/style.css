@@ -429,6 +429,38 @@ section { padding: 84px 0; }
 .pdp-disclaimer .pill { display: inline-flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
 .pdp-disclaimer .pill b { background: #fff; border: 1px solid #fed7aa; color: #9a3412; border-radius: 999px; padding: 4px 12px; font-size: 0.8rem; font-weight: 700; }
 
+/* ---------- Product photo (cards + PDP) ---------- */
+.product-card { cursor: pointer; }
+.product-photo { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.pdp-media.is-photo { background: linear-gradient(160deg, #ffffff, #eef2f8); box-shadow: var(--shadow); }
+.pdp-media.is-photo img { width: 100%; height: 100%; object-fit: contain; padding: 22px; mix-blend-mode: multiply; }
+
+/* ---------- Clinical insights list ---------- */
+.pdp-insights .insight-list { list-style: none; margin: 4px 0 0; display: grid; gap: 14px; }
+.pdp-insights .insight-list li { position: relative; padding-left: 30px; color: var(--ink-2); font-size: 0.96rem; line-height: 1.55; }
+.pdp-insights .insight-list li::before { content: ""; position: absolute; left: 0; top: 2px; width: 19px; height: 19px; border-radius: 6px; background: var(--blue-soft);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; }
+.pdp-insights .insight-list b { color: var(--ink); }
+
+/* ---------- Research hub: scientific literature accordion ---------- */
+.lit-list { display: grid; gap: 14px; margin-top: 8px; }
+.lit-item { border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); overflow: hidden; transition: box-shadow .25s ease, border-color .2s ease; }
+.lit-item[open] { box-shadow: var(--shadow-sm); border-color: #d3e0f5; }
+.lit-item > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 16px; padding: 20px 24px; }
+.lit-item > summary::-webkit-details-marker { display: none; }
+.lit-tag { flex: none; font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); background: var(--blue-soft); border-radius: 999px; padding: 5px 11px; }
+.lit-item summary h3 { font-size: 1.15rem; margin: 0; flex: 1; }
+.lit-item summary .chev { flex: none; color: var(--muted); transition: transform .25s ease; }
+.lit-item[open] summary .chev { transform: rotate(180deg); }
+.lit-body { padding: 4px 24px 26px; border-top: 1px solid var(--line); }
+.lit-body h4 { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin: 20px 0 8px; font-family: 'Space Grotesk', sans-serif; }
+.lit-body p { color: var(--ink-2); margin-bottom: 10px; font-size: 0.96rem; }
+.lit-body ul { list-style: none; margin: 4px 0 0; display: grid; gap: 11px; }
+.lit-body ul li { position: relative; padding-left: 26px; color: var(--ink-2); font-size: 0.95rem; line-height: 1.55; }
+.lit-body ul li::before { content: ""; position: absolute; left: 0; top: 7px; width: 8px; height: 8px; border-radius: 2px; background: var(--grad); }
+.lit-body cite { font-style: normal; font-weight: 700; color: var(--blue-dark); }
+.lit-note { margin-top: 26px; font-size: 0.85rem; color: var(--muted); background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
   .hero-grid, .split { grid-template-columns: 1fr; }
@@ -467,3 +499,138 @@ section { padding: 84px 0; }
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Animated hero logo ---------- */
+@keyframes logoSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes haloPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(0.92); opacity: 0.55; }
+  50%      { transform: translate(-50%, -50%) scale(1.08); opacity: 0.9; }
+}
+@keyframes orbitSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes ringSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.hero-art.is-animated-logo {
+  background: none; box-shadow: none; border: none;
+  aspect-ratio: auto; overflow: visible;
+  flex-direction: column; gap: 0.85rem;
+  padding: 24px; align-items: center; justify-content: center;
+}
+.hero-art.is-animated-logo::before { display: none; }
+
+/* stage holds the layered glow, rings, orbit and the spinning mark */
+.logo-stage {
+  position: relative;
+  width: 340px; height: 340px;
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-halo {
+  position: absolute; top: 50%; left: 50%;
+  width: 360px; height: 360px; border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(37,99,235,0.45) 0%, rgba(34,211,238,0.22) 38%, rgba(37,99,235,0) 70%);
+  filter: blur(6px);
+  animation: haloPulse 4.5s ease-in-out infinite;
+  z-index: 0;
+}
+.logo-ring {
+  position: absolute; top: 50%; left: 50%;
+  border-radius: 50%; z-index: 1;
+  transform: translate(-50%, -50%);
+}
+.logo-ring-1 {
+  width: 300px; height: 300px;
+  border: 1.5px dashed rgba(37,99,235,0.35);
+  animation: ringSpin 26s linear infinite;
+}
+.logo-ring-2 {
+  width: 248px; height: 248px;
+  border: 1px solid rgba(37,99,235,0.18);
+}
+/* a small dot that orbits the mark for a premium, lively accent */
+.logo-orbit {
+  position: absolute; top: 50%; left: 50%;
+  width: 300px; height: 300px; z-index: 2;
+  transform: translate(-50%, -50%);
+  animation: orbitSpin 9s linear infinite;
+}
+.logo-orbit i {
+  position: absolute; top: -5px; left: 50%; margin-left: -5px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--blue, #2563eb);
+  box-shadow: 0 0 12px 2px rgba(37,99,235,0.7);
+}
+.logo-spin {
+  position: relative; z-index: 3;
+  width: 230px; height: auto; object-fit: contain;
+  animation: logoSpin 16s linear infinite;
+  will-change: transform;
+  filter: drop-shadow(0 10px 30px rgba(37,99,235,0.5));
+}
+.hero-brand-text {
+  position: relative; z-index: 3;
+  font-family: 'Space Grotesk', sans-serif; font-weight: 800;
+  font-size: 2.7rem; letter-spacing: -0.035em;
+  text-align: center; line-height: 1; white-space: nowrap;
+  background: linear-gradient(120deg, #0f172a 0%, #2563eb 55%, #22d3ee 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
+.hero-brand-sub {
+  position: relative; z-index: 3;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--muted);
+  text-align: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-spin, .logo-ring, .logo-orbit, .logo-halo { animation: none; }
+}
+@media (max-width: 980px) {
+  .hero-art.is-animated-logo { display: flex; max-width: 360px; margin: 0 auto; }
+}
+@media (max-width: 560px) {
+  .logo-stage { width: 280px; height: 280px; }
+  .logo-halo { width: 300px; height: 300px; }
+  .logo-ring-1 { width: 250px; height: 250px; }
+  .logo-ring-2 { width: 205px; height: 205px; }
+  .logo-orbit { width: 250px; height: 250px; }
+  .logo-spin { width: 188px; }
+  .hero-brand-text { font-size: 2.15rem; }
+}
+
+/* ---------- 20% OFF discount badge ---------- */
+.discount-badge {
+  position: absolute; top: 14px; right: 14px;
+  background: var(--grad); color: #fff;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
+  padding: 0.3rem 0.7rem; border-radius: 999px; z-index: 1;
+}
+
+/* ---------- Strikethrough / sale pricing ---------- */
+.price-block { display: flex; flex-direction: column; gap: 1px; }
+.price-was { color: var(--muted); text-decoration: line-through; font-size: 0.82rem; font-weight: 500; }
+.price-now { font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; color: var(--ink); font-weight: 700; letter-spacing: -0.02em; }
+.pdp-msrp { text-decoration: line-through; color: var(--muted); font-size: 1rem; margin-right: 6px; }
+
+/* ---------- COA seal perk ---------- */
+.coa-perk-item { display: flex; align-items: center; gap: 14px; padding: 4px 0; }
+.coa-seal-icon { width: 62px; height: 62px; flex-shrink: 0; display: block; }
+.coa-perk-text { display: flex; flex-direction: column; gap: 3px; }
+.coa-perk-text strong { font-size: 0.9rem; font-weight: 700; color: var(--ink); }
+.coa-perk-link { font-size: 0.78rem; color: var(--blue); font-weight: 600; text-decoration: none; }
+.coa-perk-link:hover { text-decoration: underline; }
+
+/* ---------- PDP perks list ---------- */
+.pdp-perks { display: flex; flex-direction: column; gap: 6px; margin: 12px 0; }
+.pdp-perk { font-size: 0.88rem; color: var(--ink); }
+.pdp-perk a { color: var(--blue); font-weight: 600; text-decoration: none; }
+
+/* ---------- Product feature image (split section) ---------- */
+.product-feature-img { width: 100%; height: 100%; object-fit: contain; padding: 20px; mix-blend-mode: multiply; }

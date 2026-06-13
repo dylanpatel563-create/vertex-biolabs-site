@@ -3,3 +3,13 @@ COAS.pdf
 Company Logo.png
 GLP3 Vial Sample.png
 Homepage Graphic.png
+Peptide Compounds Research .pdf
+Compounds Profile Pics.png
+
+# Source product photos (originals processed into assets/img/vials/*.png)
+*PFP*.png
+*pfp*.png
+
+# Editor / tooling
+.vs/
+.claude/
