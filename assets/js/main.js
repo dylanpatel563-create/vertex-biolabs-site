@@ -224,10 +224,11 @@
     updateCount();
   }
 
-  function addItem(id, name, price) {
+  function addItem(id, name, price, qty) {
+    qty = qty || 1;
     var c = read();
     var hit = c.filter(function (i) { return i.id === id; })[0];
-    if (hit) hit.qty += 1; else c.push({ id: id, name: name, price: price, qty: 1 });
+    if (hit) { hit.qty += qty; hit.price = price; } else { c.push({ id: id, name: name, price: price, qty: qty }); }
     save(c); render();
   }
   function changeQty(id, delta) {
@@ -254,6 +255,18 @@
       openCart();
     });
   });
+
+  // Product cards link through to the detail page (image / card body)
+  document.querySelectorAll('.product-card').forEach(function (card) {
+    var add = card.querySelector('.js-add');
+    if (!add) return;
+    var pid = add.getAttribute('data-id');
+    var thumb = card.querySelector('.product-thumb');
+    if (thumb) thumb.addEventListener('click', function () { window.location.href = 'product.html?id=' + encodeURIComponent(pid); });
+  });
+
+  // Expose a tiny cart API for the product-detail page
+  window.VBXCart = { add: addItem, open: openCart, close: closeCart };
 
   // Quantity / remove (event delegation)
   drawer.addEventListener('click', function (e) {

@@ -8,21 +8,41 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=5" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=6" />
 </head>
 <body>
+
+  <!-- ============ RESEARCH-USE GATE (initial warning) ============ -->
+  <div class="ruo-gate" id="ruo-gate">
+    <div class="ruo-card">
+      <img class="logo-mark" src="assets/img/vertex-mark.png" alt="Vertex Biolabs" />
+      <h2>Research use only</h2>
+      <p>Vertex Biolabs supplies compounds strictly for laboratory and in-vitro research. Products are <strong>not for human or veterinary consumption</strong> and are not drugs, supplements, or food.</p>
+      <label class="ruo-check" for="ruo-confirm">
+        <input type="checkbox" id="ruo-confirm" />
+        <span>I confirm I am 21 or older and a qualified researcher, and that I will use these products for laboratory research only — not for human or veterinary use.</span>
+      </label>
+      <div class="ruo-actions">
+        <button class="btn btn-outline" type="button" data-ruo-exit>Exit</button>
+        <button class="btn btn-primary" type="button" data-ruo-enter disabled>I understand — enter</button>
+      </div>
+      <p class="ruo-fine">Not for human use · Not for veterinary use · Not for food use</p>
+    </div>
+  </div>
 
   <!-- ============ ANNOUNCEMENT MARQUEE ============ -->
   <div class="announce">
     <div class="marquee" aria-hidden="true">
-      <span><b>99%+ purity</b> — HPLC &amp; mass-spec verified</span>
+      <span><b>Research use only</b> &mdash; not for human consumption</span>
+      <span><b>99%+ purity</b> &mdash; HPLC &amp; mass-spec verified</span>
       <span><b>CoA</b> included on every lot</span>
-      <span><b>Ships within 24h</b> · free U.S. shipping over $60</span>
+      <span><b>Ships within 24h</b> &middot; free U.S. shipping over $60</span>
       <span><b>3rd-party tested</b> in U.S. labs</span>
-      <span><b>99%+ purity</b> — HPLC &amp; mass-spec verified</span>
+      <span><b>Research use only</b> &mdash; not for human consumption</span>
+      <span><b>99%+ purity</b> &mdash; HPLC &amp; mass-spec verified</span>
       <span><b>CoA</b> included on every lot</span>
-      <span><b>Ships within 24h</b> · free U.S. shipping over $60</span>
+      <span><b>Ships within 24h</b> &middot; free U.S. shipping over $60</span>
       <span><b>3rd-party tested</b> in U.S. labs</span>
     </div>
   </div>
@@ -51,6 +71,14 @@
       </div>
     </div>
   </header>
+
+  <!-- ============ RESEARCH-USE WARNING BAR ============ -->
+  <div class="ruo-bar">
+    <div class="container">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke-linejoin="round"/><path d="M12 9v4M12 17h.01" stroke-linecap="round"/></svg>
+      For research &amp; laboratory use only &mdash; not for human or veterinary consumption.
+    </div>
+  </div>
 
   <!-- ============ HERO ============ -->
   <section class="hero">
@@ -116,6 +144,7 @@
             <p class="product-cat">Metabolic</p>
             <h3>GLP-3 Retatrutide <span class="product-size">10 mg</span></h3>
             <p class="product-desc">A triple-receptor GLP agonist studied in metabolic-pathway and weight-regulation research.*</p>
+            <a class="product-link" href="product.html?id=glp3-retatrutide-10mg">View details &rarr;</a>
             <div class="product-foot">
               <span class="price">$69.99</span>
               <button class="btn btn-primary js-add" data-id="glp3-retatrutide-10mg" data-name="GLP-3 Retatrutide — 10 mg (Research Use Only)" data-price="69.99">Add to cart</button>
@@ -132,6 +161,7 @@
             <p class="product-cat">Skin &amp; Anti-Aging</p>
             <h3>GHK-Cu <span class="product-size">50 mg</span></h3>
             <p class="product-desc">Copper peptide studied in skin, collagen, and anti-aging research.*</p>
+            <a class="product-link" href="product.html?id=ghk-cu-50mg">View details &rarr;</a>
             <div class="product-foot">
               <span class="price">$59.99</span>
               <button class="btn btn-primary js-add" data-id="ghk-cu-50mg" data-name="GHK-Cu — 50 mg (Research Use Only)" data-price="59.99">Add to cart</button>
@@ -148,6 +178,7 @@
             <p class="product-cat">Skin &amp; Anti-Aging</p>
             <h3>Melanotan 2 <span class="product-size">10 mg</span></h3>
             <p class="product-desc">A melanocortin analog studied in melanogenesis and skin-pigmentation research.*</p>
+            <a class="product-link" href="product.html?id=melanotan2-10mg">View details &rarr;</a>
             <div class="product-foot">
               <span class="price">$49.99</span>
               <button class="btn btn-primary js-add" data-id="melanotan2-10mg" data-name="Melanotan 2 — 10 mg (Research Use Only)" data-price="49.99">Add to cart</button>

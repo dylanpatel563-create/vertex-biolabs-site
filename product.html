@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compound — Vertex Biolabs</title>
+  <meta name="description" content="High-purity research peptide from Vertex Biolabs — compound details, certificate of analysis, storage & stability. For laboratory research use only." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=6" />
+</head>
+<body>
+
+  <!-- ============ RESEARCH-USE GATE ============ -->
+  <div class="ruo-gate" id="ruo-gate">
+    <div class="ruo-card">
+      <img class="logo-mark" src="assets/img/vertex-mark.png" alt="Vertex Biolabs" />
+      <h2>Research use only</h2>
+      <p>Vertex Biolabs supplies compounds strictly for laboratory and in-vitro research. Products are <strong>not for human or veterinary consumption</strong>.</p>
+      <label class="ruo-check" for="ruo-confirm">
+        <input type="checkbox" id="ruo-confirm" />
+        <span>I confirm I am 21 or older and a qualified researcher, and that I will use these products for laboratory research only — not for human or veterinary use.</span>
+      </label>
+      <div class="ruo-actions">
+        <button class="btn btn-outline" type="button" data-ruo-exit>Exit</button>
+        <button class="btn btn-primary" type="button" data-ruo-enter disabled>Enter store</button>
+      </div>
+      <p class="ruo-fine">Not for human use · Not for veterinary use · Not for food use</p>
+    </div>
+  </div>
+
+  <!-- ============ ANNOUNCEMENT MARQUEE ============ -->
+  <div class="announce">
+    <div class="marquee" aria-hidden="true">
+      <span><b>Research use only</b> &mdash; not for human consumption</span>
+      <span><b>99%+ purity</b> &mdash; HPLC &amp; mass-spec verified</span>
+      <span><b>CoA</b> included on every lot</span>
+      <span><b>Ships within 24h</b> &middot; free U.S. shipping over $60</span>
+      <span><b>3rd-party tested</b> in U.S. labs</span>
+      <span><b>Research use only</b> &mdash; not for human consumption</span>
+      <span><b>99%+ purity</b> &mdash; HPLC &amp; mass-spec verified</span>
+      <span><b>CoA</b> included on every lot</span>
+      <span><b>Ships within 24h</b> &middot; free U.S. shipping over $60</span>
+      <span><b>3rd-party tested</b> in U.S. labs</span>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><img class="logo-mark" src="assets/img/vertex-mark.png" alt="Vertex Biolabs" /> Vertex Biolabs</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-btn js-cart-open" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z" stroke-linejoin="round"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>
+          Cart <span class="cart-count js-cart-count">0</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ RESEARCH-USE WARNING BAR ============ -->
+  <div class="ruo-bar">
+    <div class="container">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke-linejoin="round"/><path d="M12 9v4M12 17h.01" stroke-linecap="round"/></svg>
+      For research &amp; laboratory use only &mdash; not for human or veterinary consumption.
+    </div>
+  </div>
+
+  <!-- ============ PRODUCT (rendered by products.js) ============ -->
+  <main id="product-root"></main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="brand" href="index.html" style="color:#fff;"><img class="logo-mark" src="assets/img/vertex-mark-light.png" alt="Vertex Biolabs" /> Vertex Biolabs</a><p>High-purity research peptides — HPLC &amp; mass-spec tested, batch-traceable, with a certificate of analysis on every order.</p></div>
+        <div><h4>Shop</h4><a href="products.html">All compounds</a><a href="products.html">Bestsellers</a><a href="products.html">New arrivals</a></div>
+        <div><h4>Company</h4><a href="research.html">Research &amp; testing</a><a href="contact.html">Contact</a><a href="research.html">Lab results / CoA</a></div>
+        <div><h4>Help</h4><a href="contact.html">Shipping &amp; returns</a><a href="contact.html">FAQ</a><a href="contact.html">Bulk orders</a></div>
+      </div>
+      <div class="disclaimer"><strong>For laboratory and in-vitro research use only.</strong> Vertex Biolabs research compounds are not for human or veterinary use, and not for use in diagnostic, therapeutic, or food applications. By purchasing, you confirm you are a qualified researcher and will handle these materials in accordance with all applicable laws and regulations. All compounds are HPLC and mass-spec tested to 99%+ purity, with a certificate of analysis available for every lot.</div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Vertex Biolabs. All rights reserved.</span><span>Batch-tested · CoA on every lot 🧪</span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/products.js"></script>
+</body>
+</html>
