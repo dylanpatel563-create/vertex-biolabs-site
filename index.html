@@ -9,14 +9,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=6" />
+  <link rel="stylesheet" href="assets/css/style.css?v=7" />
 </head>
 <body>
 
   <!-- ============ RESEARCH-USE GATE (initial warning) ============ -->
   <div class="ruo-gate" id="ruo-gate">
     <div class="ruo-card">
-      <img class="logo-mark" src="assets/img/vertex-mark.png" alt="Vertex Biolabs" />
+      <img class="logo-mark" src="assets/img/vertex-logo-mark.png" alt="Vertex Biolabs" />
       <h2>Research use only</h2>
       <p>Vertex Biolabs supplies compounds strictly for laboratory and in-vitro research. Products are <strong>not for human or veterinary consumption</strong> and are not drugs, supplements, or food.</p>
       <label class="ruo-check" for="ruo-confirm">
@@ -51,7 +51,7 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <img class="logo-mark" src="assets/img/vertex-mark.png" alt="Vertex Biolabs" />
+        <img class="logo-mark" src="assets/img/vertex-logo-mark.png" alt="Vertex Biolabs" />
         Vertex Biolabs
       </a>
       <nav>
@@ -82,9 +82,10 @@
   </div>
 
   <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
+  <section class="hero hero-dna">
+    <canvas id="dna-canvas" aria-hidden="true"></canvas>
+    <div class="container hero-dna-inner">
+      <div class="hero-copy">
         <span class="eyebrow">Research use only · U.S. made</span>
         <h1>Research peptides, <span class="grad">verified to the lot.</span></h1>
         <p class="lead">Vertex Biolabs supplies high-purity research compounds — HPLC and mass-spec tested to 99%+, batch-traceable, and shipped within 24 hours with a certificate of analysis on every order.</p>
@@ -97,17 +98,6 @@
           <div><strong>24h</strong> Dispatch time</div>
           <div><strong>4.9★</strong> From 150+ researchers</div>
         </div>
-      </div>
-      <div class="hero-art is-animated-logo">
-        <div class="logo-stage">
-          <span class="logo-halo" aria-hidden="true"></span>
-          <span class="logo-ring logo-ring-1" aria-hidden="true"></span>
-          <span class="logo-ring logo-ring-2" aria-hidden="true"></span>
-          <span class="logo-orbit" aria-hidden="true"><i></i></span>
-          <img class="logo-spin" src="assets/img/vertex-mark.png" alt="Vertex Biolabs logo mark" />
-        </div>
-        <span class="hero-brand-text">Vertex Biolabs</span>
-        <span class="hero-brand-sub">Research-Grade Peptides</span>
       </div>
     </div>
   </section>
@@ -145,7 +135,7 @@
       <div class="product-grid">
 
         <article class="product-card reveal">
-          <div class="product-thumb" style="background:linear-gradient(150deg,#edf1f8,#d6e1f1);">
+          <div class="product-thumb" style="background:linear-gradient(150deg,#eef2f9,#dbe4f3);">
             <span class="product-tag">Bestseller</span><span class="discount-badge">20% OFF</span>
             <img class="product-photo" src="assets/img/vials/glp3-retatrutide-10mg.png" alt="GLP-3 Retatrutide research peptide vial" loading="lazy" />
           </div>
@@ -162,7 +152,7 @@
         </article>
 
         <article class="product-card reveal d1">
-          <div class="product-thumb" style="background:linear-gradient(150deg,#edf1f8,#d6e1f1);">
+          <div class="product-thumb" style="background:linear-gradient(150deg,#eef2f9,#dbe4f3);">
             <span class="product-tag">Bestseller</span><span class="discount-badge">20% OFF</span>
             <img class="product-photo" src="assets/img/vials/ghk-cu-50mg.png" alt="GHK-Cu research peptide vial" loading="lazy" />
           </div>
@@ -179,7 +169,7 @@
         </article>
 
         <article class="product-card reveal d2">
-          <div class="product-thumb" style="background:linear-gradient(150deg,#f0f0f8,#dcdcf0);">
+          <div class="product-thumb" style="background:linear-gradient(150deg,#eef2f9,#dbe4f3);">
             <span class="product-tag">Bestseller</span><span class="discount-badge">20% OFF</span>
             <img class="product-photo" src="assets/img/vials/melanotan2-10mg.png" alt="Melanotan 2 research peptide vial" loading="lazy" />
           </div>
@@ -306,7 +296,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="brand" href="index.html" style="color:#fff;">
-            <img class="logo-mark" src="assets/img/vertex-mark-light.png" alt="Vertex Biolabs" />
+            <img class="logo-mark" src="assets/img/vertex-logo-mark-light.png" alt="Vertex Biolabs" />
             Vertex Biolabs
           </a>
           <p>High-purity research peptides — HPLC &amp; mass-spec tested, batch-traceable, with a certificate of analysis on every order.</p>
@@ -343,6 +333,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=7"></script>
 </body>
 </html>

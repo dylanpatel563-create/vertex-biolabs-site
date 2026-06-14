@@ -288,3 +288,114 @@
 
   render();
 })();
+
+/* ============================================================
+   Homepage hero — rotating DNA double-helix backdrop (canvas)
+   Solid-white canvas · blue strands + white nodes · subtle,
+   biased to the right so the headline copy stays legible.
+   Sizing is driven from inside the rAF loop so it self-corrects
+   once layout settles (the renderer can report 0 width at load).
+   ============================================================ */
+(function () {
+  'use strict';
+  function start() {
+    var canvas = document.getElementById('dna-canvas');
+    if (!canvas || !canvas.getContext) return;
+    var ctx = canvas.getContext('2d');
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var W = 0, H = 0;
+    var BR = 31, BG = 114, BB = 194; // strand blue (matches logo)
+    function rgba(a) { return 'rgba(' + BR + ',' + BG + ',' + BB + ',' + a + ')'; }
+    var t = 0;
+
+    function measure() {
+      var r = canvas.getBoundingClientRect();
+      var w = Math.round(r.width), h = Math.round(r.height);
+      if (w !== W || h !== H) {
+        W = w; H = h;
+        canvas.width = Math.max(1, Math.round(W * dpr));
+        canvas.height = Math.max(1, Math.round(H * dpr));
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+    }
+
+    function xFade(x, narrow) {
+      if (narrow) return 1;            // mobile uses a global low alpha instead
+      var edge = W * 0.40;            // copy lives left of this — keep it clean
+      if (x <= edge) return 0;
+      return Math.max(0, Math.min(1, ((x - edge) / (W - edge)) * 1.25));
+    }
+
+    function draw() {
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, W, H);
+
+      var narrow = W < 760;
+      var cx = narrow ? W * 0.5 : W * 0.70;
+      var amp = narrow ? Math.min(W * 0.22, 150) : Math.min(W * 0.13, 155);
+      var gA = narrow ? 0.4 : 1;
+      var N = 30, turns = 2.6, pad = H * 0.05, usable = H - pad * 2;
+
+      var A = [], B = [], i, p0, p1, fa, d;
+      for (i = 0; i <= N; i++) {
+        var f = i / N, y = pad + f * usable, ang = f * Math.PI * 2 * turns + t;
+        A.push({ x: cx + Math.sin(ang) * amp, y: y, d: (Math.cos(ang) + 1) / 2 });
+        B.push({ x: cx + Math.sin(ang + Math.PI) * amp, y: y, d: (Math.cos(ang + Math.PI) + 1) / 2 });
+      }
+
+      // rungs (base pairs)
+      for (i = 0; i <= N; i++) {
+        fa = Math.min(xFade(A[i].x, narrow), xFade(B[i].x, narrow)) * gA;
+        if (fa <= 0) continue;
+        ctx.strokeStyle = rgba((0.10 + 0.12 * Math.max(A[i].d, B[i].d)) * fa);
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(A[i].x, A[i].y); ctx.lineTo(B[i].x, B[i].y); ctx.stroke();
+      }
+
+      // backbones (depth-shaded segments)
+      function backbone(P) {
+        for (var j = 1; j < P.length; j++) {
+          p0 = P[j - 1]; p1 = P[j];
+          fa = Math.min(xFade(p0.x, narrow), xFade(p1.x, narrow)) * gA;
+          if (fa <= 0) continue;
+          d = (p0.d + p1.d) / 2;
+          ctx.strokeStyle = rgba((0.30 + 0.45 * d) * fa);
+          ctx.lineWidth = 2.5 + 2 * d;
+          ctx.lineCap = 'round';
+          ctx.beginPath(); ctx.moveTo(p0.x, p0.y); ctx.lineTo(p1.x, p1.y); ctx.stroke();
+        }
+      }
+      backbone(A); backbone(B);
+
+      // nodes — blue body, white highlight on the front-facing ones
+      function nodes(P) {
+        for (var j = 0; j < P.length; j++) {
+          var p = P[j]; fa = xFade(p.x, narrow) * gA;
+          if (fa <= 0) continue;
+          var rad = 2.5 + 4 * p.d;
+          ctx.beginPath(); ctx.arc(p.x, p.y, rad, 0, Math.PI * 2);
+          ctx.fillStyle = rgba((0.45 + 0.5 * p.d) * fa); ctx.fill();
+          if (p.d > 0.5) {
+            ctx.beginPath(); ctx.arc(p.x, p.y, rad * 0.42, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255,255,255,' + ((p.d - 0.5) * 1.7 * fa) + ')'; ctx.fill();
+          }
+        }
+      }
+      nodes(A); nodes(B);
+    }
+
+    function frame() {
+      measure();
+      if (W > 1 && H > 1) draw();
+      if (!reduce) { t += 0.011; requestAnimationFrame(frame); }
+      else if (W <= 1) requestAnimationFrame(frame); // keep retrying until sized, then stop
+    }
+
+    requestAnimationFrame(frame);
+    window.addEventListener('resize', measure);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
+})();
