@@ -418,7 +418,7 @@ section { padding: 84px 0; }
 /* ---------- Product photo (cards + PDP) ---------- */
 .product-card { cursor: pointer; }
 .product-photo { width: 100%; height: 100%; object-fit: contain; object-position: center; mix-blend-mode: multiply; }
-.pdp-media.is-photo { background: linear-gradient(160deg, #ffffff, #eef2f8); box-shadow: var(--shadow); }
+.pdp-media.is-photo { background: #ffffff; box-shadow: var(--shadow); border: 1px solid var(--line); }
 .pdp-media.is-photo img { width: 100%; height: 100%; object-fit: contain; padding: 22px; mix-blend-mode: multiply; }
 
 /* ---------- Clinical insights list ---------- */
