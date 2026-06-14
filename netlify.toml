@@ -1,0 +1,15 @@
+# Vertex Biolabs — static site deploy config for Netlify
+# No build step: the site is plain HTML/CSS/JS served from the repo root.
+# Order intake uses Netlify Forms (the "order" form in checkout.html) — no
+# backend or API keys required. Enable email notifications under
+# Site settings → Forms → Form notifications after the first deploy.
+
+[build]
+  publish = "."
+  command = ""
+
+# Long-cache the versioned static assets (cache-busted via ?v= query strings).
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"

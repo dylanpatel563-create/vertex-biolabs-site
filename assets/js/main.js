@@ -279,11 +279,11 @@
     else if (t.hasAttribute('data-rm')) removeItem(t.getAttribute('data-rm'));
   });
 
-  // Checkout (demo — no payment backend yet)
+  // Checkout — go to the order page (manual/invoice flow via Netlify Forms)
   drawer.querySelector('[data-cart-checkout]').addEventListener('click', function () {
     var note = drawer.querySelector('[data-cart-note]');
     if (!read().length) { note.textContent = 'Your cart is empty.'; return; }
-    note.textContent = 'This is a demo store — checkout isn’t live yet. Connect a payment provider to start taking orders.';
+    window.location.href = 'checkout.html';
   });
 
   render();

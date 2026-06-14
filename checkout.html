@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Vertex Biolabs</title>
+  <meta name="description" content="Place your Vertex Biolabs research-peptide order. We confirm stock and email an invoice with payment instructions within one business day. For laboratory research use only." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=9" />
+</head>
+<body>
+
+  <!-- ============ ANNOUNCEMENT MARQUEE ============ -->
+  <div class="announce">
+    <div class="marquee" aria-hidden="true">
+      <span><b>Research use only</b> &mdash; not for human consumption</span>
+      <span><b>99%+ purity</b> &mdash; HPLC &amp; mass-spec verified</span>
+      <span><b>CoA</b> included on every lot</span>
+      <span><b>Ships within 24h</b> &middot; free U.S. shipping over $60</span>
+      <span><b>3rd-party tested</b> in U.S. labs</span>
+      <span><b>Research use only</b> &mdash; not for human consumption</span>
+      <span><b>99%+ purity</b> &mdash; HPLC &amp; mass-spec verified</span>
+      <span><b>CoA</b> included on every lot</span>
+      <span><b>Ships within 24h</b> &middot; free U.S. shipping over $60</span>
+      <span><b>3rd-party tested</b> in U.S. labs</span>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><img class="logo-mark" src="assets/img/vertex-logo-mark.png" alt="Vertex Biolabs" /> Vertex Biolabs</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-btn js-cart-open" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z" stroke-linejoin="round"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>
+          Cart <span class="cart-count js-cart-count">0</span>
+        </button>
+        <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ RESEARCH-USE WARNING BAR ============ -->
+  <div class="ruo-bar">
+    <div class="container">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" stroke-linejoin="round"/><path d="M12 9v4M12 17h.01" stroke-linecap="round"/></svg>
+      For research &amp; laboratory use only &mdash; not for human or veterinary consumption.
+    </div>
+  </div>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Checkout</span>
+      <h1>Place your <span class="grad">order</span></h1>
+      <p>Submit your order below. We confirm stock and email an invoice with payment instructions (bank transfer, Zelle, or crypto) within one business day — your order ships within 24 hours of payment.</p>
+    </div>
+  </section>
+
+  <!-- ============ CHECKOUT ============ -->
+  <section style="padding-top:24px;">
+    <div class="container" style="display:grid; grid-template-columns:1.05fr 0.95fr; gap:44px; align-items:start;" id="checkout-grid">
+
+      <!-- Order form -->
+      <div class="form-card reveal" id="form-card">
+        <form name="order" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="order-form">
+          <input type="hidden" name="form-name" value="order" />
+          <p hidden><label>Skip this: <input name="bot-field" /></label></p>
+          <input type="hidden" name="order-items" id="f-items" />
+          <input type="hidden" name="order-subtotal" id="f-subtotal" />
+          <input type="hidden" name="order-shipping" id="f-shipping" />
+          <input type="hidden" name="order-total" id="f-total" />
+          <input type="hidden" name="order-ref" id="f-ref" />
+
+          <h3 style="margin-bottom:1rem;">Contact</h3>
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@lab.edu" required autocomplete="email" />
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone <span style="color:var(--muted);font-weight:400">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" autocomplete="tel" />
+          </div>
+
+          <h3 style="margin:1.4rem 0 1rem;">Shipping address</h3>
+          <div class="form-row">
+            <label for="address1">Street address</label>
+            <input type="text" id="address1" name="address1" placeholder="123 Research Dr" required autocomplete="address-line1" />
+          </div>
+          <div class="form-row">
+            <label for="address2">Apt / suite <span style="color:var(--muted);font-weight:400">(optional)</span></label>
+            <input type="text" id="address2" name="address2" placeholder="Suite 200" autocomplete="address-line2" />
+          </div>
+          <div style="display:grid; grid-template-columns:1.4fr 0.8fr 0.8fr; gap:12px;">
+            <div class="form-row"><label for="city">City</label><input type="text" id="city" name="city" required autocomplete="address-level2" /></div>
+            <div class="form-row"><label for="state">State</label><input type="text" id="state" name="state" required autocomplete="address-level1" /></div>
+            <div class="form-row"><label for="zip">ZIP</label><input type="text" id="zip" name="zip" required autocomplete="postal-code" /></div>
+          </div>
+          <div class="form-row">
+            <label for="notes">Order notes <span style="color:var(--muted);font-weight:400">(optional)</span></label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Anything we should know about your order."></textarea>
+          </div>
+
+          <label class="ruo-check" for="ruo-ok" style="margin:0.4rem 0 1rem;">
+            <input type="checkbox" id="ruo-ok" name="ruo-confirmed" value="yes" required />
+            <span>I confirm I am 21 or older and a qualified researcher, and that these products are for <strong>laboratory research use only</strong> — not for human or veterinary use.</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-block" id="place-order">Place order</button>
+          <p id="order-status" style="margin-top:1rem; font-size:0.9rem; color:var(--blue-dark);"></p>
+          <p style="margin-top:0.8rem; font-size:0.82rem; color:var(--muted);">Submitting this order does <strong>not</strong> charge you. We email an invoice with payment instructions; your order is reserved for 48 hours.</p>
+        </form>
+      </div>
+
+      <!-- Order summary -->
+      <aside class="reveal d1" id="summary-card" style="position:sticky; top:90px;">
+        <div class="form-card" style="padding:24px;">
+          <h3 style="margin-bottom:1rem;">Order summary</h3>
+          <div id="summary-items"></div>
+          <div id="summary-totals" style="border-top:1px solid var(--line); margin-top:14px; padding-top:14px;"></div>
+        </div>
+        <div class="pdp-trust" style="margin-top:18px;">
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Ships within 24h of payment</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Free U.S. shipping over $60</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg> Third-party CoA on every lot</span>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- Empty-cart / confirmation states swap in here -->
+    <div class="container" id="checkout-message" style="display:none; text-align:center; padding:40px 0;"></div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="brand" href="index.html" style="color:#fff;"><img class="logo-mark" src="assets/img/vertex-logo-mark-light.png" alt="Vertex Biolabs" /> Vertex Biolabs</a><p>High-purity research peptides — HPLC &amp; mass-spec tested, batch-traceable, with a certificate of analysis on every order.</p></div>
+        <div><h4>Shop</h4><a href="products.html">All compounds</a><a href="products.html">Bestsellers</a><a href="products.html">New arrivals</a></div>
+        <div><h4>Company</h4><a href="research.html">Research &amp; testing</a><a href="contact.html">Contact</a><a href="research.html">Lab results / CoA</a></div>
+        <div><h4>Help</h4><a href="contact.html">Shipping &amp; returns</a><a href="faq.html">FAQ</a><a href="contact.html">Bulk orders</a></div>
+      </div>
+      <div class="disclaimer"><strong>For laboratory and in-vitro research use only.</strong> Vertex Biolabs research compounds are not for human or veterinary use, and not for use in diagnostic, therapeutic, or food applications. By purchasing, you confirm you are a qualified researcher and will handle these materials in accordance with all applicable laws and regulations.</div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Vertex Biolabs. All rights reserved.</span><span>Batch-tested · CoA on every lot 🧪</span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=8"></script>
+  <script>
+  /* ---------- Checkout: render summary + submit order (Netlify Forms) ---------- */
+  (function () {
+    'use strict';
+    var KEY = 'vbx_cart', FREE_SHIP = 60, FLAT_SHIP = 5;
+    function read() { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) { return []; } }
+    function money(n) { return '$' + n.toFixed(2); }
+
+    var grid = document.getElementById('checkout-grid');
+    var msg = document.getElementById('checkout-message');
+    var form = document.getElementById('order-form');
+
+    function totals(items) {
+      var sub = items.reduce(function (s, i) { return s + i.price * i.qty; }, 0);
+      var ship = items.length === 0 ? 0 : (sub >= FREE_SHIP ? 0 : FLAT_SHIP);
+      return { sub: sub, ship: ship, total: sub + ship };
+    }
+
+    function renderSummary() {
+      var items = read();
+      if (!items.length) {
+        grid.style.display = 'none';
+        msg.style.display = 'block';
+        msg.innerHTML = '<h2>Your cart is empty</h2>' +
+          '<p style="color:var(--muted); margin:10px 0 22px;">Add a compound to your cart, then come back to check out.</p>' +
+          '<a href="products.html" class="btn btn-primary">Browse compounds</a>';
+        return;
+      }
+      var t = totals(items);
+      document.getElementById('summary-items').innerHTML = items.map(function (i) {
+        return '<div style="display:flex; justify-content:space-between; gap:12px; padding:8px 0; font-size:0.92rem;">' +
+          '<span>' + i.name + ' <span style="color:var(--muted)">× ' + i.qty + '</span></span>' +
+          '<strong style="white-space:nowrap;">' + money(i.price * i.qty) + '</strong></div>';
+      }).join('');
+      document.getElementById('summary-totals').innerHTML =
+        row('Subtotal', money(t.sub)) +
+        row('Shipping', t.ship === 0 ? 'Free' : money(t.ship)) +
+        '<div style="display:flex; justify-content:space-between; margin-top:8px; font-size:1.15rem;"><strong>Total</strong><strong>' + money(t.total) + '</strong></div>';
+    }
+    function row(k, v) { return '<div style="display:flex; justify-content:space-between; color:var(--muted); font-size:0.92rem; padding:3px 0;"><span>' + k + '</span><span>' + v + '</span></div>'; }
+
+    function orderRef() {
+      var d = new Date();
+      return 'VBX-' + d.getFullYear() + ('0' + (d.getMonth() + 1)).slice(-2) + ('0' + d.getDate()).slice(-2) + '-' + Math.random().toString(36).slice(2, 6).toUpperCase();
+    }
+
+    renderSummary();
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var items = read();
+      if (!items.length) { renderSummary(); return; }
+      var t = totals(items);
+      var ref = orderRef();
+      // populate hidden fields
+      document.getElementById('f-items').value = items.map(function (i) {
+        return i.qty + '× ' + i.name + ' @ ' + money(i.price) + ' = ' + money(i.price * i.qty);
+      }).join('\n');
+      document.getElementById('f-subtotal').value = money(t.sub);
+      document.getElementById('f-shipping').value = t.ship === 0 ? 'Free' : money(t.ship);
+      document.getElementById('f-total').value = money(t.total);
+      document.getElementById('f-ref').value = ref;
+
+      var btn = document.getElementById('place-order');
+      var status = document.getElementById('order-status');
+      btn.disabled = true; btn.textContent = 'Placing order…'; status.textContent = '';
+
+      var body = new URLSearchParams(new FormData(form)).toString();
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status ' + r.status);
+          localStorage.removeItem(KEY);
+          document.querySelectorAll('.js-cart-count').forEach(function (el) { el.textContent = '0'; });
+          grid.style.display = 'none';
+          msg.style.display = 'block';
+          msg.innerHTML = '<div style="font-size:2.4rem; line-height:1;">✅</div>' +
+            '<h2 style="margin-top:12px;">Order received</h2>' +
+            '<p style="color:var(--muted); max-width:34rem; margin:12px auto 6px;">Thanks! Your order reference is <strong>' + ref + '</strong>. We\'ll confirm stock and email an invoice with payment instructions to <strong>' + (document.getElementById('email').value || 'your email') + '</strong> within one business day.</p>' +
+            '<p style="color:var(--muted); max-width:34rem; margin:0 auto 22px;">Your order is reserved for 48 hours. It ships within 24 hours of payment.</p>' +
+            '<a href="products.html" class="btn btn-primary">Continue browsing</a>';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        })
+        .catch(function () {
+          btn.disabled = false; btn.textContent = 'Place order';
+          status.style.color = '#b91c1c';
+          status.innerHTML = 'Sorry — your order couldn\'t be submitted. Please email it to <a href="mailto:hello@vertexbiolabs.com" style="color:var(--blue);font-weight:600;">hello@vertexbiolabs.com</a> or try again.';
+        });
+    });
+  })();
+  </script>
+</body>
+</html>
