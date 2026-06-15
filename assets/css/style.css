@@ -49,11 +49,10 @@ img { max-width: 100%; display: block; }
 .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
 .eyebrow {
-  display: inline-flex; align-items: center; gap: 0.5rem;
+  display: inline-flex; align-items: center;
   font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--blue); font-weight: 700;
 }
-.eyebrow::before { content: ""; width: 18px; height: 2px; background: var(--blue); border-radius: 2px; }
 .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
 /* ---------- Buttons ---------- */
