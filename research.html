@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=10" />
+  <link rel="stylesheet" href="assets/css/style.css?v=11" />
 </head>
 <body>
 
@@ -303,5 +303,52 @@
   </footer>
 
   <script src="assets/js/main.js?v=8"></script>
+  <script>
+  /* ---------- Per-compound "View COA" (Janoshik certificates) ---------- */
+  (function () {
+    'use strict';
+    var MAP = {
+      'GLP-3 Retatrutide': 'glp3-retatrutide-10mg',
+      'GHK-Cu': 'ghk-cu-50mg',
+      'Wolverine': 'wolverine-10mg',
+      'Semax': 'semax-30mg',
+      'Melanotan 2': 'melanotan2-10mg',
+      'CJC/Ipamorelin': 'cjc-ipamorelin-10mg',
+      'GLOW': 'glow-60mg',
+      'MOTS-C': 'mots-c-10mg',
+      'NAD+': 'nad-500mg'
+    };
+    var lb = document.createElement('div');
+    lb.className = 'coa-lightbox';
+    lb.innerHTML = '<button class="coa-lightbox-close" type="button" aria-label="Close">×</button><div class="coa-lightbox-inner"><img alt="Certificate of Analysis" /></div>';
+    document.body.appendChild(lb);
+    var img = lb.querySelector('img');
+    function openCoa(id, name) {
+      img.src = 'assets/coa/' + id + '.png';
+      img.alt = name + ' — Certificate of Analysis';
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCoa() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target.classList.contains('coa-lightbox-close')) closeCoa();
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeCoa(); });
+
+    document.querySelectorAll('.coa-card').forEach(function (card) {
+      var h3 = card.querySelector('.coa-head h3');
+      if (!h3) return;
+      var name = h3.textContent.trim();
+      var id = MAP[name];
+      if (!id) return;
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'coa-view-btn';
+      btn.textContent = 'View full COA →';
+      btn.addEventListener('click', function () { openCoa(id, name); });
+      card.appendChild(btn);
+    });
+  })();
+  </script>
 </body>
 </html>
