@@ -213,7 +213,8 @@
           '<p style="font-size:0.85rem;color:var(--muted)">General research summary only — not a medical claim, dosing guidance, or therapeutic recommendation.</p></div>' +
         '<div class="pdp-block"><h2><span class="b-emoji">🔬</span> Certificate of analysis</h2>' +
           '<p style="color:var(--muted);margin-bottom:18px">Independent HPLC &amp; mass-spec analysis (Janoshik Analytical). The lot-specific CoA for your vial ships with your order.</p>' +
-          coaBlock(p.coa) + '</div>' +
+          coaBlock(p.coa) +
+          '<button type="button" class="coa-view-btn" id="pdp-coa-view" style="width:auto;margin-top:20px;padding:11px 22px;">View full COA →</button></div>' +
         '<div class="pdp-block pdp-insights"><h2><span class="b-emoji">📚</span> Clinical insights &amp; scientific backing</h2>' +
           '<ul class="insight-list">' + insights + '</ul>' +
           '<p style="font-size:0.82rem;color:var(--muted);margin-top:14px">Summaries of published third-party research literature, provided for scientific context only. They describe findings on the compound — not claims about this product, which is sold strictly for laboratory research. <a href="research.html" style="color:var(--blue);font-weight:600">See the full research hub →</a></p></div>' +
@@ -270,4 +271,25 @@
     var label = p.name + ' — ' + p.size + bundleSuffix + ' (Research Use Only)';
     if (window.VBXCart) { window.VBXCart.add(id, label, unit, q); window.VBXCart.open(); }
   });
+
+  /* ---------- View COA lightbox ---------- */
+  (function () {
+    var lb = document.createElement('div');
+    lb.className = 'coa-lightbox';
+    lb.innerHTML = '<button class="coa-lightbox-close" type="button" aria-label="Close">×</button><div class="coa-lightbox-inner"><img alt="Certificate of Analysis" /></div>';
+    document.body.appendChild(lb);
+    var limg = lb.querySelector('img');
+    function close() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target.classList.contains('coa-lightbox-close')) close();
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    var btn = document.getElementById('pdp-coa-view');
+    if (btn) btn.addEventListener('click', function () {
+      limg.src = 'assets/coa/' + id + '.png';
+      limg.alt = p.name + ' — Certificate of Analysis';
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  })();
 })();
