@@ -546,3 +546,16 @@ section { padding: 84px 0; }
 .coa-lightbox-inner { max-width: 700px; margin: 0 auto; }
 .coa-lightbox img { width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 30px 80px rgba(0,0,0,0.5); background: #fff; }
 .coa-lightbox-close { position: fixed; top: 16px; right: 20px; width: 44px; height: 44px; border-radius: 50%; border: none; cursor: pointer; background: #fff; color: var(--ink); font-size: 1.5rem; line-height: 1; box-shadow: var(--shadow); z-index: 1201; }
+
+/* ---------- Legal / policy pages ---------- */
+.legal { max-width: 760px; margin: 0 auto; }
+.legal > p.muted-note { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.6rem; }
+.legal h2 { font-size: 1.35rem; margin: 2.1rem 0 0.6rem; }
+.legal h3 { font-size: 1.04rem; margin: 1.3rem 0 0.35rem; }
+.legal p, .legal li { color: var(--ink-2); font-size: 0.98rem; line-height: 1.75; }
+.legal p { margin-bottom: 0.7rem; }
+.legal ul { margin: 0.4rem 0 0.9rem 1.2rem; }
+.legal li { margin-bottom: 0.4rem; }
+.legal a { color: var(--blue); font-weight: 600; }
+.footer-legal a { color: rgba(255,255,255,0.72); }
+.footer-legal a:hover { color: #fff; }
