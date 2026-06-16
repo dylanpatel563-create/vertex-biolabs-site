@@ -559,3 +559,16 @@ section { padding: 84px 0; }
 .legal a { color: var(--blue); font-weight: 600; }
 .footer-legal a { color: rgba(255,255,255,0.72); }
 .footer-legal a:hover { color: #fff; }
+
+/* ---------- Checkout: accept terms & policies box ---------- */
+.checkout-accept {
+  display: flex; align-items: flex-start; gap: 12px;
+  border: 1px solid var(--line); border-radius: 12px; background: var(--paper);
+  padding: 14px 16px; margin: 6px 0 16px; cursor: pointer;
+  font-size: 0.9rem; line-height: 1.55; color: var(--ink-2);
+}
+.checkout-accept input[type="checkbox"] {
+  margin-top: 2px; width: 18px; height: 18px; flex-shrink: 0;
+  accent-color: var(--blue); cursor: pointer;
+}
+.checkout-accept a { color: var(--blue); font-weight: 600; text-decoration: underline; }
