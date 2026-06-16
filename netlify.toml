@@ -5,7 +5,7 @@
 # Site settings → Forms → Form notifications after the first deploy.
 
 [build]
-  publish = "_deploy"
+  publish = "."
   command = ""
 
 # Long-cache the versioned static assets (cache-busted via ?v= query strings).
