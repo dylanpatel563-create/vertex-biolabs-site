@@ -84,6 +84,18 @@
       stability: STD_STABILITY,
       coa: { type: 'blend', comps: [{ n: 'CJC-1295', p: '99.653%', w: '93.1%' }, { n: 'Ipamorelin', p: '99.760%', w: '95.2%' }], sample: 'CJC-1295 (no DAC) 5 mg + Ipamorelin 5 mg', content: '5.85 mg + 4.96 mg', batch: 'CP10/202602' }
     },
+    'tesamorelin-10mg': {
+      name: 'Tesamorelin', cat: 'Growth', size: '10 mg', origPrice: 74.99, price: 59.99, tag: 'New',
+      desc: 'A stabilized GHRH analog studied in growth-hormone, IGF-1, and visceral-fat research.',
+      about: 'Tesamorelin is a synthetic analog of growth-hormone-releasing hormone (GHRH) — a 44-amino-acid peptide modified with a trans-3-hexenoic acid group on the N-terminus that resists DPP-4 degradation and extends its half-life. It binds pituitary GHRH receptors to stimulate endogenous, pulsatile growth-hormone secretion, which in turn raises hepatic IGF-1 while preserving the body\'s natural feedback regulation rather than introducing exogenous GH. It has been studied most extensively for its effect on visceral adipose tissue.',
+      insights: [
+        'Approved by the FDA (as <b>Egrifta</b>) for HIV-associated lipodystrophy; pivotal trials showed roughly a <b>15–18% reduction in visceral adipose tissue</b> over 26 weeks.',
+        'Stimulates <b>endogenous, pulsatile GH release</b> via pituitary GHRH receptors, raising IGF-1 while preserving normal hypothalamic–pituitary feedback.',
+        'A randomized trial in people with NAFLD/NASH reported <b>reduced liver fat</b>, and separate work has explored tesamorelin\'s effects on cognition in older adults.'
+      ],
+      stability: STD_STABILITY,
+      coa: { type: 'single', purity: '99.252%', dash: '336.76', sample: 'Tesamorelin · 10 mg', content: '10.99 mg', batch: 'TSM10/202602' }
+    },
     'glow-60mg': {
       name: 'GLOW', cat: 'Skin & Anti-Aging · Blend', size: '70 mg', origPrice: 94.99, price: 75.99, tag: 'Bestseller',
       desc: 'GHK-Cu, TB-500 & BPC-157 blend for skin and recovery research.',
@@ -119,6 +131,18 @@
       ],
       stability: 'Supplied as a lyophilized powder. NAD+ is sensitive to heat and moisture — keep sealed vials refrigerated or frozen (−20 °C) for long-term storage. After reconstitution with bacteriostatic water, refrigerate at 2–8 °C and use within 5–7 days. Protect from light and avoid freeze–thaw cycles.',
       coa: { type: 'content', sample: 'NAD+ · 500 mg', content: '635.97 mg', batch: 'NJ500/202509' }
+    },
+    'bac-water-10ml': {
+      name: 'Bacteriostatic Water', cat: 'Reconstitution', size: '10 ml', origPrice: 12.49, price: 9.99, tag: 'Essential',
+      desc: 'Sterile diluent with 0.9% benzyl alcohol for reconstituting lyophilized research peptides.',
+      about: 'Bacteriostatic water is sterile water containing approximately 0.9% benzyl alcohol as a bacteriostatic preservative. The preservative inhibits microbial growth, allowing a sealed vial to be punctured multiple times over an in-use period (typically up to 28 days) without compromising sterility. In peptide research it is the standard diluent for reconstituting lyophilized (freeze-dried) compounds into a workable solution for laboratory handling and measurement.',
+      insights: [
+        'Contains <b>~0.9% benzyl alcohol</b> as a bacteriostatic preservative, supporting multiple punctures over a typical 28-day in-use window.',
+        'The standard diluent for reconstituting <b>lyophilized (freeze-dried) peptides</b> into solution for laboratory handling.',
+        'Independently assayed at <b>9.54 mg/ml benzyl alcohol</b> by Janoshik Analytical (batch BA10/202602).'
+      ],
+      stability: 'Store sealed vials at room temperature, away from direct light. Once the stopper is punctured, the ~0.9% benzyl alcohol preservative keeps the vial bacteriostatic for multi-dose use, typically up to 28 days — discard after the in-use period. Do not freeze.',
+      coa: { type: 'content', sample: 'Bacteriostatic Water · 10 ml', content: '9.54 mg/ml benzyl alcohol', batch: 'BA10/202602' }
     }
   };
 
