@@ -315,7 +315,8 @@ section { padding: 84px 0; }
 .coa-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .coa-card { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 24px; display: grid; grid-template-columns: 150px 1fr; grid-template-areas: "head head" "ring data"; gap: 18px 26px; align-items: center; transition: box-shadow .25s ease, transform .25s ease; }
 .coa-card:hover { box-shadow: var(--glow); transform: translateY(-3px); border-color: transparent; }
-.coa-card.blend { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; grid-template-areas: "head head" "comp data"; align-items: start; }
+.coa-card.blend { grid-template-columns: 1fr; grid-template-areas: "head" "comp" "data"; align-items: start; }
+.coa-card.blend .coa-data { border-top: 1px solid var(--line); padding-top: 14px; }
 .coa-head { grid-area: head; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
 .coa-cat { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 4px; }
 .coa-head h3 { font-size: 1.3rem; margin: 0; }
@@ -335,8 +336,8 @@ section { padding: 84px 0; }
 .coa-row b { font-size: 0.9rem; color: var(--ink); text-align: right; font-weight: 600; }
 
 .coa-comp { grid-area: comp; }
-.coa-comp-title { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 6px 0 14px; }
-.comp-row { display: grid; grid-template-columns: 92px 1fr auto; align-items: center; gap: 12px; margin-bottom: 13px; }
+.coa-comp-title { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 4px 0 10px; }
+.comp-row { display: grid; grid-template-columns: 92px 1fr auto; align-items: center; gap: 12px; margin-bottom: 9px; }
 .comp-name { font-size: 0.85rem; font-weight: 600; color: var(--ink); }
 .comp-track { height: 9px; border-radius: 999px; background: var(--blue-soft); overflow: hidden; }
 .comp-track i { display: block; height: 100%; border-radius: 999px; background: var(--grad-soft); }
@@ -452,7 +453,6 @@ section { padding: 84px 0; }
   .stats .container { grid-template-columns: repeat(2, 1fr); gap: 36px 20px; }
   .product-grid, .value-cards, .cat-grid, .reviews-grid { grid-template-columns: repeat(2, 1fr); }
   .coa-grid { grid-template-columns: 1fr; }
-  .coa-card.blend { grid-template-areas: "head" "comp" "data"; grid-template-columns: 1fr; }
   .coa-legend { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .pdp-top { grid-template-columns: 1fr; gap: 28px; }

@@ -132,6 +132,18 @@
       stability: 'Supplied as a lyophilized powder. NAD+ is sensitive to heat and moisture — keep sealed vials refrigerated or frozen (−20 °C) for long-term storage. After reconstitution with bacteriostatic water, refrigerate at 2–8 °C and use within 5–7 days. Protect from light and avoid freeze–thaw cycles.',
       coa: { type: 'content', sample: 'NAD+ · 500 mg', content: '635.97 mg', batch: 'NJ500/202509' }
     },
+    'igf1-lr3-1mg': {
+      name: 'IGF-1 LR3', cat: 'Growth', size: '1 mg', origPrice: 54.99, price: 43.99, tag: 'New',
+      desc: 'A long-acting IGF-1 analog studied in growth-factor signaling, satellite cell activation, and muscle-fiber research.',
+      about: 'IGF-1 LR3 (Insulin-like Growth Factor-1 Long Arg3) is a synthetic 83-amino-acid analog of human IGF-1 bearing an arginine substitution at position 3 and a 13-amino-acid N-terminal extension. These modifications reduce binding affinity for IGF binding proteins (IGFBPs) by more than 270-fold compared to native IGF-1, extending the functional half-life from roughly 12–15 minutes to approximately 20–30 hours. It binds the IGF-1 receptor (IGF-1R) with high affinity and activates the PI3K → Akt → mTOR cascade that governs ribosome biogenesis, protein synthesis, satellite cell activation, and anti-apoptotic signaling in skeletal muscle and other tissues.',
+      insights: [
+        'IGFBP-resistant design extends half-life to <b>~20–30 hours</b> and confers roughly <b>3× the in-vitro potency</b> of native IGF-1 through sustained IGF-1R / PI3K / Akt / mTOR activation.',
+        'In rodent skeletal-muscle models, IGF-1 LR3 promoted satellite cell proliferation and <b>myofiber hyperplasia</b> — an increase in muscle fiber number rather than hypertrophy alone.',
+        'Recombinant native IGF-1 (mecasermin, <b>Increlex</b>) is FDA-approved for primary IGF-1 deficiency, confirming IGF-1R pathway validity; LR3 is the standard tool compound for in-vitro IGF-1R signaling and cell-proliferation assays.'
+      ],
+      stability: STD_STABILITY,
+      coa: { type: 'single', purity: '99.521%', dash: '337.67', sample: 'IGF-1 LR3 · 1 mg', content: '1.07 mg', batch: 'LR3/202602' }
+    },
     'bac-water-10ml': {
       name: 'Bacteriostatic Water', cat: 'Reconstitution', size: '10 ml', origPrice: 12.49, price: 9.99, tag: 'Essential',
       desc: 'Sterile diluent with 0.9% benzyl alcohol for reconstituting lyophilized research peptides.',
@@ -233,15 +245,10 @@
       '</div>' +
 
       '<div class="pdp-sections">' +
-        '<div class="pdp-block"><h2><span class="b-emoji">🧬</span> About ' + p.name + '</h2><p>' + p.about + '</p>' +
-          '<p style="font-size:0.85rem;color:var(--muted)">General research summary only — not a medical claim, dosing guidance, or therapeutic recommendation.</p></div>' +
         '<div class="pdp-block"><h2><span class="b-emoji">🔬</span> Certificate of analysis</h2>' +
           '<p style="color:var(--muted);margin-bottom:18px">Independent HPLC &amp; mass-spec analysis (Janoshik Analytical). The lot-specific CoA for your vial ships with your order.</p>' +
           coaBlock(p.coa) +
           '<button type="button" class="coa-view-btn" id="pdp-coa-view" style="width:auto;margin-top:20px;padding:11px 22px;">View full COA →</button></div>' +
-        '<div class="pdp-block pdp-insights"><h2><span class="b-emoji">📚</span> Clinical insights &amp; scientific backing</h2>' +
-          '<ul class="insight-list">' + insights + '</ul>' +
-          '<p style="font-size:0.82rem;color:var(--muted);margin-top:14px">Summaries of published third-party research literature, provided for scientific context only. They describe findings on the compound — not claims about this product, which is sold strictly for laboratory research. <a href="research.html" style="color:var(--blue);font-weight:600">See the full research hub →</a></p></div>' +
         '<div class="pdp-block"><h2><span class="b-emoji">❄️</span> Storage &amp; stability</h2><p>' + p.stability + '</p></div>' +
         '<div class="pdp-block pdp-disclaimer"><h2><span class="b-emoji">⚠️</span> Important — research use only</h2>' +
           '<p>This product is sold strictly for in-vitro laboratory and research use. It is <b>not intended for human or veterinary consumption</b>, and is not a drug, supplement, or food. It is not approved by the FDA for the diagnosis, treatment, cure, or prevention of any disease. By purchasing, you confirm you are a qualified researcher and will handle this material in accordance with all applicable laws.</p>' +
