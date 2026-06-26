@@ -37,7 +37,7 @@
       coa: { type: 'single', purity: '99.954%', dash: '339.14', sample: 'GHK-Cu · 50 mg', content: '50.61 mg', batch: 'CU50/202509' }
     },
     'wolverine-10mg': {
-      name: 'Wolverine', cat: 'Recovery · Blend', size: '10 mg', origPrice: 74.99, price: 59.99, tag: 'Bestseller',
+      name: 'Wolverine', cat: 'Recovery', size: '10 mg', origPrice: 74.99, price: 59.99, tag: 'Bestseller',
       desc: 'BPC-157 + TB-500 combined for recovery-focused research protocols.',
       about: 'The Wolverine stack pairs BPC-157 (Body Protection Compound-157) with TB-500 (a synthetic Thymosin β4 analog). BPC-157 acts locally to accelerate neovascularization via the FAK/AKT/eNOS → VEGF cascade and drives fibroblast proliferation and organized type-I collagen deposition. TB-500 works systemically by regulating monomeric G-actin to coordinate cell migration, mobilize progenitor cells, and limit fibrotic scarring — producing dual-layered, localized-plus-systemic tissue repair.',
       insights: [
@@ -73,7 +73,7 @@
       coa: { type: 'single', purity: '99.555%', dash: '337.79', sample: 'Melanotan 2 · 10 mg', content: '10.42 mg', batch: 'ML10/2025-05' }
     },
     'cjc-ipamorelin-10mg': {
-      name: 'CJC/Ipamorelin', cat: 'Growth · Blend', size: '10 mg', origPrice: 79.99, price: 63.99, tag: 'Bestseller',
+      name: 'CJC/Ipamorelin', cat: 'Growth', size: '10 mg', origPrice: 79.99, price: 63.99, tag: 'Bestseller',
       desc: 'A GHRH + secretagogue research blend studied in growth-hormone signaling models.',
       about: 'This dual growth-hormone-secretagogue blend pairs CJC-1295 — a 29-amino-acid GHRH analog whose DAC modification extends its half-life to ~5.8–8.1 days and raises GH amplitude — with Ipamorelin, a highly selective GHS-R1a (ghrelin-receptor) agonist that raises GH pulse frequency through the Gαq–phospholipase C cascade. Together they drive hepatic IGF-1 production within physiological limits, without elevating cortisol, prolactin, or ACTH.',
       insights: [
@@ -97,7 +97,7 @@
       coa: { type: 'single', purity: '99.252%', dash: '336.76', sample: 'Tesamorelin · 10 mg', content: '10.99 mg', batch: 'TSM10/202602' }
     },
     'glow-60mg': {
-      name: 'GLOW', cat: 'Skin & Anti-Aging · Blend', size: '70 mg', origPrice: 94.99, price: 75.99, tag: 'Bestseller',
+      name: 'GLOW', cat: 'Skin & Anti-Aging', size: '70 mg', origPrice: 94.99, price: 75.99, tag: 'Bestseller',
       desc: 'GHK-Cu, TB-500 & BPC-157 blend for skin and recovery research.',
       about: 'GLOW is a tri-peptide dermal-regeneration blend of GHK-Cu, BPC-157, and TB-500. GHK-Cu upregulates dermal wound-healing genes and stimulates collagen and elastin synthesis; BPC-157 restores microvascular blood flow via the FAK/AKT/eNOS pathway and organizes collagen-fibril deposition; and TB-500 regulates G-actin to drive cell migration and minimize rigid scar tissue — supporting both aesthetic and musculoskeletal recovery.',
       insights: [
@@ -143,6 +143,18 @@
       ],
       stability: STD_STABILITY,
       coa: { type: 'single', purity: '99.521%', dash: '337.67', sample: 'IGF-1 LR3 · 1 mg', content: '1.07 mg', batch: 'LR3/202602' }
+    },
+    'klow-10mg': {
+      name: 'KLOW', cat: 'Skin & Anti-Aging', size: '80 mg', origPrice: 84.99, price: 67.99, tag: 'New',
+      desc: 'A tripeptide derived from α-MSH studied for anti-inflammatory, gut-barrier, and skin-inflammation research.',
+      about: 'KLOW is KPV (Lys-Pro-Val), a C-terminal tripeptide of α-melanocyte-stimulating hormone (α-MSH). It acts as a partial agonist at the melanocortin-1 receptor (MC1R) — expressed on dermal keratinocytes, macrophages, and intestinal epithelial cells — and potently suppresses the NF-κB and MAPK inflammatory cascades without triggering the pigmentary effects of full-length α-MSH. Unlike many peptides, KPV can traverse epithelial barriers directly, making it the subject of gut-barrier, mucosal inflammation, and skin-inflammation research. It also exhibits antimicrobial activity against several gram-positive organisms.',
+      insights: [
+        'Directly translocates into intestinal epithelial cells and blocks <b>NF-κB nuclear entry</b>, reducing TNF-α, IL-1β, and IL-6 to near-basal levels in inflamed colonocyte models.',
+        'Oral and nanoparticle-formulated KPV significantly reduced colitis severity in DSS and TNBS mouse models, restoring gut-barrier tight-junction proteins <b>ZO-1 and claudin-1</b> without systemic immunosuppression.',
+        'At nanomolar concentrations, KPV inhibited UV-induced <b>IL-6, IL-8, and PGE2</b> release in human keratinocyte models, pointing to a role in skin inflammation and photoprotection research.'
+      ],
+      stability: STD_STABILITY,
+      coa: { type: 'single', purity: '99.858%', dash: '338.87', sample: 'KPV · 80 mg', content: '9.98 mg', batch: 'KPV10/202509' }
     },
     'bac-water-10ml': {
       name: 'Bacteriostatic Water', cat: 'Reconstitution', size: '10 ml', origPrice: 12.49, price: 9.99, tag: 'Essential',
